@@ -1,6 +1,7 @@
-# williamlagos.github.io
+# Professional developer profile
 My own full stack developer public profile website. Work in progress, here some of my projects that I'm working and/or worked:
 
+## Projects written in C/C++
 - libjsonrpc (https://github.com/williamlagos/libjsonrpc)
 - libsockets (https://github.com/williamlagos/libsockets)
 - elements (https://github.com/williamlagos/elements)
