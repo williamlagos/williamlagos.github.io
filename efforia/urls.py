@@ -16,8 +16,13 @@ Including another URLconf
 from django.conf.urls import url
 from django.contrib import admin
 from django.views.generic import TemplateView
+from django_distill import distill_re_path
+
+def get_index():
+    pass
 
 urlpatterns = [
-    url(r'^$', TemplateView.as_view(template_name="index.html")),
+    # url(r'^$', TemplateView.as_view(template_name="index.html")),
+    distill_re_path(r'^$', TemplateView.as_view(template_name="index.html"), name='index', distill_func=get_index),
     url(r'^admin/', admin.site.urls),
 ]
