@@ -1,4 +1,4 @@
-# Professional developer profile
+# William Oliveira de Lagos
 My own full stack developer public profile website. Work in progress, here some of my projects that I'm working and/or worked:
 
 ## Projects written in C/C++
