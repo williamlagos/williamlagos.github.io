@@ -4,10 +4,10 @@ body {
     margin: 0px;
 }
 footer {
-    position: absolute;
+    /* position: absolute;
     right: 0;
     bottom: 0;
-    left: 0;
+    left: 0; */
     padding: 1rem;
     text-align: center;
     background-color: #000;
