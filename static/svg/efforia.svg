@@ -1,13 +1,1 @@
-<?xml version="1.0" encoding="utf-8"?>
-<!-- Generator: Adobe Illustrator 21.0.2, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
-<svg version="1.1" id="Camada_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
-	 viewBox="0 0 500 500" style="enable-background:new 0 0 500 500;" xml:space="preserve">
-<style type="text/css">
-	.st0{fill:#FFFFFF;}
-</style>
-<path class="st0" d="M430.4,129.4L261.7,28.2c-7.2-4.3-16.1-4.3-23.3,0L69.6,129.4c-6.8,4.1-11,11.5-11,19.4v202.3
-	c0,8,4.2,15.4,11,19.4l168.7,101.2c3.6,2.2,7.6,3.2,11.7,3.2c4,0,8.1-1.1,11.7-3.2l168.7-101.2c6.8-4.1,11-11.5,11-19.4V148.8
-	C441.4,140.9,437.2,133.5,430.4,129.4z M390.4,324.2c0,5.8-3.1,11.3-8.1,14.3l-123.7,74.2c-2.6,1.6-5.6,2.4-8.6,2.4
-	c-3,0-5.9-0.8-8.6-2.4l-123.7-74.2c-5-3-8.1-8.4-8.1-14.3V175.8c0-5.8,3.1-11.3,8.1-14.3l123.7-74.2c5.3-3.2,11.8-3.2,17.1,0
-	l123.7,74.2c5,3,8.1,8.4,8.1,14.3V324.2z"/>
-</svg>
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="169.117" height="198.817" viewBox="0 0 169.117 198.817"><defs><linearGradient id="a" x1="0.5" y1="1" x2="0.5" gradientUnits="objectBoundingBox"><stop offset="0" stop-color="#92bd94"/><stop offset="0.2" stop-color="#6b99ca"/><stop offset="0.4" stop-color="#9b7aa3"/><stop offset="0.6" stop-color="#cf6784"/><stop offset="0.8" stop-color="#dd9c3e"/><stop offset="1" stop-color="#f2d201"/></linearGradient></defs><path d="M267.638,122.122,193.1,77.427a10.017,10.017,0,0,0-10.3,0l-74.539,44.7a10.019,10.019,0,0,0-4.868,8.593V220.1a10.021,10.021,0,0,0,4.868,8.593L182.8,273.391a10.017,10.017,0,0,0,10.3,0L267.638,228.7a10.021,10.021,0,0,0,4.868-8.593V130.714A10.02,10.02,0,0,0,267.638,122.122Zm-17.681,86.063a7.347,7.347,0,0,1-3.569,6.3l-54.661,32.776a7.346,7.346,0,0,1-7.556,0l-54.663-32.776a7.347,7.347,0,0,1-3.569-6.3V142.633a7.347,7.347,0,0,1,3.569-6.3l54.663-32.777a7.347,7.347,0,0,1,7.556,0l54.661,32.777a7.348,7.348,0,0,1,3.569,6.3Z" transform="translate(-103.389 -76)" fill="url(#a)"/></svg>
