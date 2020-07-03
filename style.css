@@ -1,4 +1,6 @@
-.galaxy h1, .galaxy h2, .galaxy h3, .galaxy h4 { color: white; font-weight: lighter; }
+.galaxy h1, .galaxy h2, .galaxy h3, .galaxy h4 { color: white; }
+.black h1, .black h2 { color: white; }
+h1, h2 { font-weight: lighter; }
 body {
     font-family: 'Roboto', sans-serif;
     margin: 0px;
@@ -38,6 +40,12 @@ a {
     text-decoration: none;
     color: black;
 }
-.img-lateral {
+.img-symbol {
     height: 100px;
+}
+.img-brand {
+    height: 200px;
+}
+.img-art {
+    height: 75px;
 }
