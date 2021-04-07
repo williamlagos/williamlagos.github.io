@@ -60,3 +60,24 @@ a {
 .img-art {
     height: 75px;
 }
+.grid .row .col-md-4 {
+    min-height: 360px;
+    background-size: cover !important;
+    background-position: center !important;
+    padding: 0px !important;
+}
+.grid .row .col-md-4 .overlay {
+    width: 100%;
+    min-height: 240px;
+    background: rgba(0,0,0,0.75);
+    padding: 0px !important;
+    text-decoration: none;
+    display: flex;
+    align-content: center;
+    align-items: center;
+    justify-content: center;
+}
+.grid .row .col-md-4 .content {
+    text-align: center;
+    color: white;
+}
