@@ -69,7 +69,7 @@ a {
 .grid .row .col-md-4 .overlay {
     width: 100%;
     min-height: 240px;
-    background: rgba(0,0,0,0.75);
+    background: rgba(0,0,0,0.65);
     padding: 0px !important;
     text-decoration: none;
     display: flex;
