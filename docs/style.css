@@ -44,8 +44,16 @@ hr { width:256px; }
     text-decoration: none;
     font-size: 1.1em;
 }
-.language {
+.language, .links {
     margin: 0.5em 1.5em;
+}
+.links a, .links a:hover {
+    text-decoration: none;
+}
+.top {
+    display:flex;
+    justify-content: space-between;
+    width:100vw;
 }
 a {
     text-decoration: none;
@@ -55,10 +63,13 @@ a {
     height: 100px;
 }
 .img-brand {
-    height: 200px;
+    height: 192px;
 }
 .img-art {
-    height: 75px;
+    height: 72px;
+}
+.img-icon {
+    height:24px;
 }
 .grid .row .col-md-4 {
     min-height: 360px;

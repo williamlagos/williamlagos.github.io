@@ -1,1 +1,11 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="128.401" height="105.771" viewBox="0 0 128.401 105.771"><path d="M123.9,3.047a60.892,60.892,0,0,1-17.541,8.547A25.027,25.027,0,0,0,62.45,28.353V33.94A59.551,59.551,0,0,1,12.173,8.633S-10.173,58.911,40.1,81.257A65.026,65.026,0,0,1,1,92.429c50.278,27.932,111.728,0,111.728-64.244a25.139,25.139,0,0,0-.447-4.637,43.127,43.127,0,0,0,11.62-20.5Z" transform="translate(1.75 -0.212)" fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="5.5"/></svg>
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Generator: Adobe Illustrator 25.2.1, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<svg version="1.1" id="Camada_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 viewBox="0 0 128.4 105.8" style="enable-background:new 0 0 128.4 105.8;" xml:space="preserve">
+<style type="text/css">
+	.st0{fill:none;stroke:#FFFFFF;stroke-width:5.5;stroke-linecap:round;stroke-linejoin:round;}
+</style>
+<path class="st0" d="M125.7,2.8c-5.3,3.8-11.3,6.7-17.5,8.5C99,1,83.2-0.1,72.8,8.9c-5.6,4.8-8.7,11.9-8.6,19.2v5.6
+	c-19.9,0.5-38.8-9-50.3-25.3c0,0-22.3,50.3,27.9,72.6C30.3,88.9,16.6,92.8,2.8,92.2c50.3,27.9,111.7,0,111.7-64.2
+	c0-1.6-0.2-3.1-0.4-4.6C119.7,17.7,123.8,10.6,125.7,2.8L125.7,2.8z"/>
+</svg>
