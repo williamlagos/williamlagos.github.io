@@ -4,6 +4,7 @@ h1, h2 { font-weight: lighter; }
 body {
     font-family: 'Roboto', sans-serif;
     margin: 0px;
+    overflow-x: hidden;
 }
 .black {
     /* position: absolute;
