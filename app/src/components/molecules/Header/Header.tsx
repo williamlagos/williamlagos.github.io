@@ -1,3 +1,8 @@
+import githubIcon from './assets/svg/github.svg'
+import twitterIcon from './assets/svg/twitter.svg'
+import linkedinIcon from './assets/svg/linkedin.svg'
+import lampIcon from './assets/svg/lamp.svg'
+
 const Header = () => (
   <div className="container-fluid p-0">
     <div className="galaxy">
@@ -12,7 +17,7 @@ const Header = () => (
               <img
                 className="img-fluid img-icon"
                 alt="github"
-                src="./svg/github.svg"
+                src={githubIcon}
               />{' '}
             </a>
             &nbsp;
@@ -24,7 +29,7 @@ const Header = () => (
               <img
                 className="img-fluid img-icon"
                 alt="twitter"
-                src="./svg/twitter.svg"
+                src={twitterIcon}
               />{' '}
             </a>
             &nbsp;
@@ -36,14 +41,14 @@ const Header = () => (
               <img
                 className="img-fluid img-icon"
                 alt="linkedin"
-                src="./svg/linkedin.svg"
+                src={linkedinIcon}
               />
             </a>
           </div>
         </div>
         <div className="highlight">
           <div className="container">
-            <img src="./svg/lamp.svg" width="192" alt="lamp" />
+            <img src={lampIcon} width="192" alt="lamp" />
             <br />
             <br />
             <h1>William Oliveira de Lagos</h1>

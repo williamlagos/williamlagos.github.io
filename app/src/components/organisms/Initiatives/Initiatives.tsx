@@ -1,3 +1,9 @@
+import pandoraSvg from './assets/svg/pandora.svg'
+import coworkingSvg from './assets/svg/coworking.svg'
+import efforiaSvg from './assets/svg/efforia.svg'
+import hubSvg from './assets/svg/hub.svg'
+import eosSvg from './assets/svg/eos.svg'
+
 const Initiatives = () => (
   <div className="container pt-5">
     <div className="row text-center">
@@ -12,11 +18,7 @@ const Initiatives = () => (
           href="https://williamlagos.github.io/pandora/"
           rel="noopener noreferrer"
         >
-          <img
-            className="img-fluid img-brand"
-            alt="pandora"
-            src="./svg/pandora.svg"
-          />
+          <img className="img-fluid img-brand" alt="pandora" src={pandoraSvg} />
         </a>
         <div className="py-4">
           <h2>Pandora Entertainment</h2>
@@ -34,7 +36,7 @@ const Initiatives = () => (
           <img
             className="img-fluid img-brand"
             alt="coworking"
-            src="./svg/coworking.svg"
+            src={coworkingSvg}
           />
         </a>
         <div className="py-4">
@@ -50,11 +52,7 @@ const Initiatives = () => (
           href="https://williamlagos.github.io/efforia/"
           rel="noopener noreferrer"
         >
-          <img
-            className="img-fluid img-brand"
-            alt="efforia"
-            src="./svg/efforia.svg"
-          />
+          <img className="img-fluid img-brand" alt="efforia" src={efforiaSvg} />
         </a>
         <div className="py-4">
           <h2>Efforia Invent Company</h2>
@@ -80,11 +78,7 @@ const Initiatives = () => (
                 href="https://williamlagos.github.io/pandora/hub/"
                 rel="noopener noreferrer"
               >
-                <img
-                  className="img-fluid img-symbol"
-                  alt="hub"
-                  src="./svg/hub.svg"
-                />
+                <img className="img-fluid img-symbol" alt="hub" src={hubSvg} />
               </a>
             </div>
           </div>
@@ -97,11 +91,7 @@ const Initiatives = () => (
                 href="https://github.com/williamlagos/eos"
                 rel="noopener noreferrer"
               >
-                <img
-                  className="img-fluid img-symbol"
-                  alt="eos"
-                  src="./svg/eos.svg"
-                />
+                <img className="img-fluid img-symbol" alt="eos" src={eosSvg} />
               </a>
             </div>
             <div className="col-9 d-flex align-items-center">

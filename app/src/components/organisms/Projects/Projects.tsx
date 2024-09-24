@@ -1,3 +1,10 @@
+import kombiImg from './assets/img/kombi.png'
+import marktImg from './assets/img/markt.png'
+import eventImg from './assets/img/event.png'
+import nasaImg from './assets/img/nasa.png'
+import workspacesImg from './assets/img/workspaces.png'
+import blockchainImg from './assets/img/blockchain.png'
+
 const Projects = () => [
   <div key="title" className="container-fluid black">
     <div className="container py-5">
@@ -10,10 +17,7 @@ const Projects = () => [
   </div>,
   <div key="list" className="container-fluid grid">
     <div className="row">
-      <div
-        className="col-md-4"
-        style={{ background: "url('./img/kombi.png')" }}
-      >
+      <div className="col-md-4" style={{ background: `url(${kombiImg})` }}>
         <a
           href="https://williamlagos.github.io/kombi"
           target="_blank"
@@ -26,10 +30,7 @@ const Projects = () => [
           </div>
         </a>
       </div>
-      <div
-        className="col-md-4"
-        style={{ background: "url('./img/markt.png')" }}
-      >
+      <div className="col-md-4" style={{ background: `url(${marktImg})` }}>
         <a
           href="https://williamlagos.github.io/markt"
           target="_blank"
@@ -42,10 +43,7 @@ const Projects = () => [
           </div>
         </a>
       </div>
-      <div
-        className="col-md-4"
-        style={{ background: "url('./img/event.png')" }}
-      >
+      <div className="col-md-4" style={{ background: `url(${eventImg})` }}>
         <a
           href="https://github.com/williamlagos/events"
           target="_blank"
@@ -60,7 +58,7 @@ const Projects = () => [
       </div>
     </div>
     <div className="row">
-      <div className="col-md-4" style={{ background: "url('./img/nasa.png')" }}>
+      <div className="col-md-4" style={{ background: `url(${nasaImg})` }}>
         <a
           href="https://williamlagos.github.io/landing/"
           target="_blank"
@@ -73,10 +71,7 @@ const Projects = () => [
           </div>
         </a>
       </div>
-      <div
-        className="col-md-4"
-        style={{ background: "url('./img/workspaces.png')" }}
-      >
+      <div className="col-md-4" style={{ background: `url(${workspacesImg})` }}>
         <a
           href="https://williamlagos.github.io/coworking"
           target="_blank"
@@ -89,10 +84,7 @@ const Projects = () => [
           </div>
         </a>
       </div>
-      <div
-        className="col-md-4"
-        style={{ background: "url('./img/blockchain.png')" }}
-      >
+      <div className="col-md-4" style={{ background: `url(${blockchainImg})` }}>
         <a
           href="https://williamlagos.github.io/blockchain"
           target="_blank"

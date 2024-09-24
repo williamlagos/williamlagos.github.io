@@ -1,3 +1,9 @@
+import djangoSvg from './assets/svg/django.svg'
+import synapseSvg from './assets/svg/synapse.svg'
+import elementsSvg from './assets/svg/elements.svg'
+import contentsSvg from './assets/svg/contents.svg'
+import devSvg from './assets/svg/dev.svg'
+
 const OpenSource = () => (
   <div className="container py-5">
     <div className="row text-center">
@@ -12,11 +18,7 @@ const OpenSource = () => (
           href="https://github.com/williamlagos?tab=repositories&q=django&type=&language=&sort="
           rel="noopener noreferrer"
         >
-          <img
-            className="img-fluid img-symbol"
-            alt="django"
-            src="./svg/django.svg"
-          />
+          <img className="img-fluid img-symbol" alt="django" src={djangoSvg} />
         </a>
         <div className="py-3">
           <h2>Django</h2>
@@ -32,7 +34,7 @@ const OpenSource = () => (
           <img
             className="img-fluid img-symbol"
             alt="synapse"
-            src="./svg/synapse.svg"
+            src={synapseSvg}
           />
         </a>
         <div className="py-3">
@@ -49,7 +51,7 @@ const OpenSource = () => (
           <img
             className="img-fluid img-symbol"
             alt="elements"
-            src="./svg/elements.svg"
+            src={elementsSvg}
           />
         </a>
         <div className="py-3">
@@ -66,7 +68,7 @@ const OpenSource = () => (
           <img
             className="img-fluid img-symbol"
             alt="contents"
-            src="./svg/contents.svg"
+            src={contentsSvg}
           />
         </a>
         <div className="py-3">
@@ -80,11 +82,7 @@ const OpenSource = () => (
           href="https://github.com/williamlagos/coding"
           rel="noopener noreferrer"
         >
-          <img
-            className="img-fluid img-symbol"
-            alt="contents"
-            src="./svg/dev.svg"
-          />
+          <img className="img-fluid img-symbol" alt="coding" src={devSvg} />
         </a>
         <div className="py-3">
           <h2>Coding</h2>
