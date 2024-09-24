@@ -1,8 +1,5 @@
-import Highlights from '../../organisms/Highlights/Highlights'
-import Initiatives from '../../organisms/Initiatives/Initiatives'
-import Projects from '../../organisms/Projects/Projects'
-import OpenSource from '../../organisms/OpenSource/OpenSource'
-import Layout from '../../templates/Layout/Layout'
+import { Highlights, Initiatives, Projects, OpenSource } from '../../organisms/'
+import { Layout } from '../../templates/'
 
 const Main = () => (
   <Layout>
