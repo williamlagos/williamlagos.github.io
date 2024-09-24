@@ -35,7 +35,7 @@ body {
 .galaxy {
     display: flex;
     align-items: center;
-    height: 100vh;
+    height: 80vh;
     background: url('./img/galaxy.jpg');
     background-size: cover;
 }
