@@ -1,6 +1,6 @@
 import { ReactNode } from 'react'
 
-import { Header, Footer } from '../../molecules/'
+import { Header, Footer } from '../../molecules'
 
 const Layout = ({ children }: { children: ReactNode }) => (
   <>
