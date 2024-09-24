@@ -6,6 +6,7 @@ import eventImg from './assets/img/event.png'
 import nasaImg from './assets/img/nasa.png'
 import workspacesImg from './assets/img/workspaces.png'
 import blockchainImg from './assets/img/blockchain.png'
+import spacing from '../../../tokens/spacing'
 
 const GridItem = styled.div<{ $backgroundUrl: string }>`
   min-height: 360px;
@@ -36,7 +37,7 @@ const GridItemContent = styled.div`
 `
 
 const Black = styled.div`
-  padding: 1rem;
+  padding: ${spacing.md};
   text-align: center;
   background-color: #000;
   color: #ffffff;

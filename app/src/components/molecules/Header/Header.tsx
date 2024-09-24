@@ -5,6 +5,12 @@ import githubIcon from './assets/svg/github.svg'
 import twitterIcon from './assets/svg/twitter.svg'
 import linkedinIcon from './assets/svg/linkedin.svg'
 import lampIcon from './assets/svg/lamp.svg'
+import iconSizes from '../../../tokens/sizes'
+import spacing from '../../../tokens/spacing'
+
+const Icon = styled.img`
+  height: ${iconSizes.small};
+`
 
 const Galaxy = styled.div`
   display: flex;
@@ -39,12 +45,8 @@ const Highlight = styled.div`
   height: 100%;
 `
 
-const Icon = styled.img`
-  height: 24px;
-`
-
 const Links = styled.div`
-  margin: 0.5em 1.5em;
+  margin: ${spacing.md};
 
   a,
   a:hover {

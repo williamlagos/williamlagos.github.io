@@ -1,11 +1,13 @@
 import styled from 'styled-components'
+
 import cloudSvg from './assets/svg/cloud.svg'
 import toolSvg from './assets/svg/tool.svg'
 import penToolSvg from './assets/svg/pen-tool.svg'
 import bookSvg from './assets/svg/book.svg'
+import iconSizes from '../../../tokens/sizes'
 
 const Art = styled.img`
-  height: 72px;
+  height: ${iconSizes.xlarge};
 `
 
 const Highlights = () => (

@@ -5,9 +5,10 @@ import synapseSvg from './assets/svg/synapse.svg'
 import elementsSvg from './assets/svg/elements.svg'
 import contentsSvg from './assets/svg/contents.svg'
 import devSvg from './assets/svg/dev.svg'
+import iconSizes from '../../../tokens/sizes'
 
 const Symbol = styled.img`
-  height: 100px;
+  height: ${iconSizes.xxlarge};
 `
 
 const OpenSource = () => (

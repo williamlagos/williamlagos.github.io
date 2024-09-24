@@ -5,9 +5,10 @@ import coworkingSvg from './assets/svg/coworking.svg'
 import efforiaSvg from './assets/svg/efforia.svg'
 import hubSvg from './assets/svg/hub.svg'
 import eosSvg from './assets/svg/eos.svg'
+import iconSizes from '../../../tokens/sizes'
 
 const Brand = styled.img`
-  height: 192px;
+  height: ${iconSizes.xxxlarge};
 `
 
 const Initiatives = () => (
