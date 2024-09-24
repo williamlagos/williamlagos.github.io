@@ -1,24 +1,75 @@
+import styled from 'styled-components'
+
+import galaxyBackground from './assets/img/galaxy.jpg'
 import githubIcon from './assets/svg/github.svg'
 import twitterIcon from './assets/svg/twitter.svg'
 import linkedinIcon from './assets/svg/linkedin.svg'
 import lampIcon from './assets/svg/lamp.svg'
 
+const Galaxy = styled.div`
+  display: flex;
+  align-items: center;
+  height: 80vh;
+  background: url('${galaxyBackground}');
+  background-size: cover;
+
+  h1,
+  h2,
+  h3,
+  h4 {
+    color: white;
+  }
+`
+
+const Overlay = styled.div`
+  display: flex;
+  align-items: end;
+  flex-direction: column;
+  height: 100%;
+  width: 100%;
+  background: rgba(0, 0, 0, 0.6);
+  background-size: cover;
+`
+
+const Highlight = styled.div`
+  display: flex;
+  text-align: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+`
+
+const Icon = styled.img`
+  height: 24px;
+`
+
+const Links = styled.div`
+  margin: 0.5em 1.5em;
+
+  a,
+  a:hover {
+    text-decoration: none;
+  }
+`
+
+const Top = styled.div`
+  display: flex;
+  justify-content: space-between;
+  width: 100vw;
+`
+
 const Header = () => (
   <div className="container-fluid p-0">
-    <div className="galaxy">
-      <div className="overlay">
-        <div className="top">
-          <div className="links">
+    <Galaxy>
+      <Overlay>
+        <Top>
+          <Links>
             <a
               target="_blank"
               href="https://www.github.com/williamlagos"
               rel="noopener noreferrer"
             >
-              <img
-                className="img-fluid img-icon"
-                alt="github"
-                src={githubIcon}
-              />{' '}
+              <Icon className="img-fluid" alt="github" src={githubIcon} />
             </a>
             &nbsp;
             <a
@@ -26,11 +77,7 @@ const Header = () => (
               href="https://www.twitter.com/lagoswilliam"
               rel="noopener noreferrer"
             >
-              <img
-                className="img-fluid img-icon"
-                alt="twitter"
-                src={twitterIcon}
-              />{' '}
+              <Icon className="img-fluid" alt="twitter" src={twitterIcon} />
             </a>
             &nbsp;
             <a
@@ -38,15 +85,11 @@ const Header = () => (
               href="https://www.linkedin.com/in/lagoswilliam"
               rel="noopener noreferrer"
             >
-              <img
-                className="img-fluid img-icon"
-                alt="linkedin"
-                src={linkedinIcon}
-              />
+              <Icon className="img-fluid" alt="linkedin" src={linkedinIcon} />
             </a>
-          </div>
-        </div>
-        <div className="highlight">
+          </Links>
+        </Top>
+        <Highlight>
           <div className="container">
             <img src={lampIcon} width="192" alt="lamp" />
             <br />
@@ -57,9 +100,9 @@ const Header = () => (
               Python | C/C++ | TypeScript
             </h4>
           </div>
-        </div>
-      </div>
-    </div>
+        </Highlight>
+      </Overlay>
+    </Galaxy>
   </div>
 )
 

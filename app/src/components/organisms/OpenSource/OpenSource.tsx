@@ -1,8 +1,14 @@
+import styled from 'styled-components'
+
 import djangoSvg from './assets/svg/django.svg'
 import synapseSvg from './assets/svg/synapse.svg'
 import elementsSvg from './assets/svg/elements.svg'
 import contentsSvg from './assets/svg/contents.svg'
 import devSvg from './assets/svg/dev.svg'
+
+const Symbol = styled.img`
+  height: 100px;
+`
 
 const OpenSource = () => (
   <div className="container py-5">
@@ -18,7 +24,7 @@ const OpenSource = () => (
           href="https://github.com/williamlagos?tab=repositories&q=django&type=&language=&sort="
           rel="noopener noreferrer"
         >
-          <img className="img-fluid img-symbol" alt="django" src={djangoSvg} />
+          <Symbol className="img-fluid" alt="django" src={djangoSvg} />
         </a>
         <div className="py-3">
           <h2>Django</h2>
@@ -31,11 +37,7 @@ const OpenSource = () => (
           href="https://github.com/williamlagos/synapse"
           rel="noopener noreferrer"
         >
-          <img
-            className="img-fluid img-symbol"
-            alt="synapse"
-            src={synapseSvg}
-          />
+          <Symbol className="img-fluid" alt="synapse" src={synapseSvg} />
         </a>
         <div className="py-3">
           <h2>Synapse</h2>
@@ -48,11 +50,7 @@ const OpenSource = () => (
           href="https://github.com/williamlagos/elements"
           rel="noopener noreferrer"
         >
-          <img
-            className="img-fluid img-symbol"
-            alt="elements"
-            src={elementsSvg}
-          />
+          <Symbol className="img-fluid" alt="elements" src={elementsSvg} />
         </a>
         <div className="py-3">
           <h2>Elements</h2>
@@ -65,11 +63,7 @@ const OpenSource = () => (
           href="https://github.com/williamlagos/contents"
           rel="noopener noreferrer"
         >
-          <img
-            className="img-fluid img-symbol"
-            alt="contents"
-            src={contentsSvg}
-          />
+          <Symbol className="img-fluid" alt="contents" src={contentsSvg} />
         </a>
         <div className="py-3">
           <h2>Contents</h2>
@@ -82,7 +76,7 @@ const OpenSource = () => (
           href="https://github.com/williamlagos/coding"
           rel="noopener noreferrer"
         >
-          <img className="img-fluid img-symbol" alt="coding" src={devSvg} />
+          <Symbol className="img-fluid" alt="coding" src={devSvg} />
         </a>
         <div className="py-3">
           <h2>Coding</h2>

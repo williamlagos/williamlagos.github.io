@@ -1,3 +1,5 @@
+import styled from 'styled-components'
+
 import kombiImg from './assets/img/kombi.png'
 import marktImg from './assets/img/markt.png'
 import eventImg from './assets/img/event.png'
@@ -5,8 +7,48 @@ import nasaImg from './assets/img/nasa.png'
 import workspacesImg from './assets/img/workspaces.png'
 import blockchainImg from './assets/img/blockchain.png'
 
+const GridItem = styled.div<{ $backgroundUrl: string }>`
+  min-height: 360px;
+  background-size: cover !important;
+  background-position: center !important;
+  padding: 0px !important;
+  min-width: calc(100% / 3);
+  background: url(${(props) => props.$backgroundUrl});
+`
+
+const GridItemOverlay = styled.a`
+  width: 100%;
+  height: 100%;
+  min-height: 240px;
+  background: rgba(0, 0, 0, 0.65);
+  padding: 0px !important;
+  text-decoration: none;
+  display: flex;
+  align-content: center;
+  align-items: center;
+  justify-content: center;
+`
+
+const GridItemContent = styled.div`
+  text-decoration: none;
+  text-align: center;
+  color: white;
+`
+
+const Black = styled.div`
+  padding: 1rem;
+  text-align: center;
+  background-color: #000;
+  color: #ffffff;
+
+  h1,
+  h2 {
+    color: white;
+  }
+`
+
 const Projects = () => [
-  <div key="title" className="container-fluid black">
+  <Black key="title" className="container-fluid">
     <div className="container py-5">
       <div className="row">
         <div className="col-12">
@@ -14,89 +56,83 @@ const Projects = () => [
         </div>
       </div>
     </div>
-  </div>,
+  </Black>,
   <div key="list" className="container-fluid grid">
     <div className="row">
-      <div className="col-md-4" style={{ background: `url(${kombiImg})` }}>
-        <a
+      <GridItem $backgroundUrl={kombiImg}>
+        <GridItemOverlay
           href="https://williamlagos.github.io/kombi"
           target="_blank"
-          className="overlay"
           rel="noopener noreferrer"
         >
-          <div className="content">
+          <GridItemContent>
             <h2>Frete Fácil</h2>
             <p>Freighter delivery app</p>
-          </div>
-        </a>
-      </div>
-      <div className="col-md-4" style={{ background: `url(${marktImg})` }}>
-        <a
+          </GridItemContent>
+        </GridItemOverlay>
+      </GridItem>
+      <GridItem $backgroundUrl={marktImg}>
+        <GridItemOverlay
           href="https://williamlagos.github.io/markt"
           target="_blank"
-          className="overlay"
           rel="noopener noreferrer"
         >
-          <div className="content">
+          <GridItemContent>
             <h2>Vupit</h2>
             <p>Beer distribution app</p>
-          </div>
-        </a>
-      </div>
-      <div className="col-md-4" style={{ background: `url(${eventImg})` }}>
-        <a
+          </GridItemContent>
+        </GridItemOverlay>
+      </GridItem>
+      <GridItem $backgroundUrl={eventImg}>
+        <GridItemOverlay
           href="https://github.com/williamlagos/events"
           target="_blank"
-          className="overlay"
           rel="noopener noreferrer"
         >
-          <div className="content">
+          <GridItemContent>
             <h2>DanceApp</h2>
             <p>Events Application</p>
-          </div>
-        </a>
-      </div>
+          </GridItemContent>
+        </GridItemOverlay>
+      </GridItem>
     </div>
     <div className="row">
-      <div className="col-md-4" style={{ background: `url(${nasaImg})` }}>
-        <a
+      <GridItem $backgroundUrl={nasaImg}>
+        <GridItemOverlay
           href="https://williamlagos.github.io/landing/"
           target="_blank"
-          className="overlay"
           rel="noopener noreferrer"
         >
-          <div className="content">
+          <GridItemContent>
             <h2>MoHub</h2>
             <p>Landing Page lead capture</p>
-          </div>
-        </a>
-      </div>
-      <div className="col-md-4" style={{ background: `url(${workspacesImg})` }}>
-        <a
+          </GridItemContent>
+        </GridItemOverlay>
+      </GridItem>
+      <GridItem $backgroundUrl={workspacesImg}>
+        <GridItemOverlay
           href="https://williamlagos.github.io/coworking"
           target="_blank"
-          className="overlay"
           rel="noopener noreferrer"
         >
-          <div className="content">
+          <GridItemContent>
             <h2>Fábrica de Ideias Coworking</h2>
             <p>Coworking space landing page</p>
-          </div>
-        </a>
-      </div>
-      <div className="col-md-4" style={{ background: `url(${blockchainImg})` }}>
-        <a
+          </GridItemContent>
+        </GridItemOverlay>
+      </GridItem>
+      <GridItem $backgroundUrl={blockchainImg}>
+        <GridItemOverlay
           href="https://williamlagos.github.io/blockchain"
           target="_blank"
-          className="overlay"
           rel="noopener noreferrer"
         >
-          <div className="content">
+          <GridItemContent>
             <h2>Grandir Capital Financeiro</h2>
             <p>Blockchain broker landing page</p>
-          </div>
-        </a>
-      </div>
+          </GridItemContent>
+        </GridItemOverlay>
+      </GridItem>
     </div>
   </div>
 ]

@@ -1,131 +1,16 @@
-.galaxy h1,
-.galaxy h2,
-.galaxy h3,
-.galaxy h4 {
-    color: white;
-}
-
-.black h1,
-.black h2 {
-    color: white;
-}
-
-h1,
-h2 {
-    font-weight: lighter;
-}
-
 body {
     font-family: 'Roboto', sans-serif;
     margin: 0px;
     overflow-x: hidden;
 }
 
-.black {
-    /* position: absolute;
-    right: 0;
-    bottom: 0;
-    left: 0; */
-    padding: 1rem;
-    text-align: center;
-    background-color: #000;
-    color: #FFFFFF;
-}
-
-.galaxy {
-    display: flex;
-    align-items: center;
-    height: 80vh;
-    background: url('./img/galaxy.jpg');
-    background-size: cover;
-}
-
-.overlay {
-    display: flex;
-    align-items: end;
-    flex-direction: column;
-    height: 100%;
-    width: 100%;
-    background: rgba(0, 0, 0, 0.6);
-    background-size: cover;
-}
-
-.highlight {
-    display: flex;
-    text-align: center;
-    align-items: center;
-    width: 100%;
-    height: 100%;
-}
-
-hr {
-    width: 256px;
-}
-
-.language a,
-.language {
-    color: white;
-    text-decoration: none;
-    font-size: 1.1em;
-}
-
-.language,
-.links {
-    margin: 0.5em 1.5em;
-}
-
-.links a,
-.links a:hover {
-    text-decoration: none;
-}
-
-.top {
-    display: flex;
-    justify-content: space-between;
-    width: 100vw;
-}
-
-a {
+a,
+a:hover {
     text-decoration: none;
     color: black;
 }
 
-.img-symbol {
-    height: 100px;
-}
-
-.img-brand {
-    height: 192px;
-}
-
-.img-art {
-    height: 72px;
-}
-
-.img-icon {
-    height: 24px;
-}
-
-.grid .row .col-md-4 {
-    min-height: 360px;
-    background-size: cover !important;
-    background-position: center !important;
-    padding: 0px !important;
-}
-
-.grid .row .col-md-4 .overlay {
-    width: 100%;
-    min-height: 240px;
-    background: rgba(0, 0, 0, 0.65);
-    padding: 0px !important;
-    text-decoration: none;
-    display: flex;
-    align-content: center;
-    align-items: center;
-    justify-content: center;
-}
-
-.grid .row .col-md-4 .content {
-    text-align: center;
-    color: white;
+h1,
+h2 {
+    font-weight: lighter;
 }
