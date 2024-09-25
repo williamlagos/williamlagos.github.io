@@ -1,7 +1,9 @@
 # William Oliveira de Lagos
+
 My own full stack developer public profile website. Work in progress, here some of my projects that I'm working and/or worked:
 
 ## Projects written in C/C++
+
 - [libsockets](https://github.com/williamlagos/libsockets): simple integration with unix / berkley sockets
 - [elements](https://github.com/williamlagos/elements): agnostic game engine for creating characters and its properties
 - [dinamo](https://github.com/williamlagos/dinamo): game based on cocos2d-x for cross-platform
@@ -10,6 +12,7 @@ My own full stack developer public profile website. Work in progress, here some 
 - [eos](https://github.com/williamlagos/eos): linux-based operating system utils and configurations
 
 ## Projects written in Python
+
 - [elements-server](https://github.com/williamlagos/elements-server): server written in python for game development
 - [django-dashboarder](https://github.com/williamlagos/django-dashboarder): django package to customize dashboard
 - [django-socialize](https://github.com/williamlagos/django-socialize): django package for social accounts integration

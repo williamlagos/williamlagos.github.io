@@ -1,0 +1,16 @@
+body {
+    font-family: 'Roboto', sans-serif;
+    margin: 0px;
+    overflow-x: hidden;
+}
+
+a,
+a:hover {
+    text-decoration: none;
+    color: black;
+}
+
+h1,
+h2 {
+    font-weight: lighter;
+}
