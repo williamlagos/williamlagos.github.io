@@ -3,46 +3,48 @@ name: Deploy to GitHub Pages
 on:
   push:
     branches:
-      - main
+      - main # Trigger the workflow on push to the main branch
 
 jobs:
   build:
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-latest # Use the latest Ubuntu runner
+
+    environment: github-pages # Specify the environment as GitHub Pages
 
     permissions:
-      pages: write
-      id-token: write
-      contents: read
+      pages: write # Grant write permission to GitHub Pages
+      id-token: write # Grant write permission to ID token
+      contents: read # Grant read permission to repository contents
 
     steps:
       - name: Checkout repository
-        uses: actions/checkout@v3
+        uses: actions/checkout@v3 # Checkout the repository code
 
       - name: Set up Docker Buildx
-        uses: docker/setup-buildx-action@v2
+        uses: docker/setup-buildx-action@v2 # Set up Docker Buildx for multi-platform builds
 
       - name: Cache Docker layers
-        uses: actions/cache@v3
+        uses: actions/cache@v3 # Cache Docker layers to speed up builds
         with:
-          path: /tmp/.buildx-cache
-          key: ${{ runner.os }}-buildx-${{ github.sha }}
+          path: /tmp/.buildx-cache # Path to store the cache
+          key: ${{ runner.os }}-buildx-${{ github.sha }} # Cache key based on OS and commit SHA
           restore-keys: |
-            ${{ runner.os }}-buildx-
+            ${{ runner.os }}-buildx-  # Restore key prefix
 
       - name: Build Docker image
-        run: docker build --cache-from=type=gha,src=/tmp/.buildx-cache --cache-to=type=gha,dest=/tmp/.buildx-cache -t portfolio:latest .
+        run: docker build --cache-from=type=gha,src=/tmp/.buildx-cache --cache-to=type=gha,dest=/tmp/.buildx-cache -t portfolio:latest . # Build Docker image with caching
 
       - name: Run Docker container
-        run: docker run --rm --name portfolio-app -d portfolio:latest
+        run: docker run --rm --name portfolio-app -d portfolio:latest # Run the Docker container in detached mode
 
       - name: Copy build artifacts
-        run: docker cp portfolio-app:/usr/share/nginx/html ./dist
+        run: docker cp portfolio-app:/usr/share/nginx/html ./dist # Copy build artifacts from the container to the host
 
       - name: Upload GitHub Pages artifacts
-        uses: actions/upload-pages-artifact@v3
+        uses: actions/upload-pages-artifact@v3 # Upload the build artifacts for GitHub Pages
         with:
-          path: ./dist
+          path: ./dist # Path to the build artifacts
 
       - name: Deploy to GitHub Pages
         id: deployment
-        uses: actions/deploy-pages@v4
+        uses: actions/deploy-pages@v4 # Deploy the artifacts to GitHub Pages
