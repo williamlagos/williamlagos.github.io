@@ -2,7 +2,6 @@ import styled from 'styled-components'
 
 import galaxyBackground from './assets/img/galaxy.jpg'
 import githubIcon from './assets/svg/github.svg'
-import twitterIcon from './assets/svg/twitter.svg'
 import linkedinIcon from './assets/svg/linkedin.svg'
 import lampIcon from './assets/svg/lamp.svg'
 import iconSizes from '../../../tokens/sizes'
@@ -72,14 +71,6 @@ const Header = () => (
               rel="noopener noreferrer"
             >
               <Icon className="img-fluid" alt="github" src={githubIcon} />
-            </a>
-            &nbsp;
-            <a
-              target="_blank"
-              href="https://www.twitter.com/lagoswilliam"
-              rel="noopener noreferrer"
-            >
-              <Icon className="img-fluid" alt="twitter" src={twitterIcon} />
             </a>
             &nbsp;
             <a
