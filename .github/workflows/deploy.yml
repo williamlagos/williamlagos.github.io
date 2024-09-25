@@ -33,11 +33,15 @@ jobs:
         run: |
           docker run --rm -v $(pwd):/app -w /app node:18-alpine sh -c "npm install && npm run build"
 
+      - name: Create build artifact tarball
+        run: |
+          tar -czf dist.tar.gz dist
+
       - name: Upload build artifacts
         uses: actions/upload-artifact@v4
         with:
           name: github-pages
-          path: ./dist
+          path: dist.tar.gz
 
   # Deploy job
   deploy:
@@ -65,10 +69,7 @@ jobs:
         uses: actions/download-artifact@v4
         with:
           name: github-pages
-          path: ./dist
 
       - name: Deploy to GitHub Pages
-        uses: peaceiris/actions-gh-pages@v3
-        with:
-          github_token: ${{ secrets.GITHUB_TOKEN }}
-          publish_dir: ./dist
+        id: deployment
+        uses: actions/deploy-pages@v4
