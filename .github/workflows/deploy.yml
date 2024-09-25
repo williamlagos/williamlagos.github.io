@@ -31,13 +31,13 @@ jobs:
 
       - name: Run Docker container
         run: |
-          docker run --rm -v $(pwd):/app -w /app node:18-alpine sh -c "yarn install && yarn run build && tar -czf dist.tar.gz dist"
+          docker run --rm -v $(pwd):/app -w /app node:18-alpine sh -c "yarn install && yarn run build"
 
       - name: Upload build artifacts
         uses: actions/upload-artifact@v4
         with:
           name: github-pages
-          path: ./dist.tar.gz
+          path: ./dist
 
   # Deploy job
   deploy:
@@ -65,8 +65,14 @@ jobs:
         uses: actions/download-artifact@v4
         with:
           name: github-pages
-          path: ./dist.tar.gz
+          path: ./dist
+
+      # - name: Deploy to GitHub Pages
+      #   id: deployment
+      #   uses: actions/deploy-pages@v4
 
       - name: Deploy to GitHub Pages
-        id: deployment
-        uses: actions/deploy-pages@v4
+        uses: peaceiris/actions-gh-pages@v3
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: ./dist
