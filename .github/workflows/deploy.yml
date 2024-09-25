@@ -30,7 +30,7 @@ jobs:
             ${{ runner.os }}-buildx-
 
       - name: Build Docker image
-        run: docker build --cache-from=type=local,src=/tmp/.buildx-cache --cache-to=type=local,dest=/tmp/.buildx-cache -t portfolio:latest .
+        run: docker build --cache-from=type=gha,src=/tmp/.buildx-cache --cache-to=type=gha,dest=/tmp/.buildx-cache -t portfolio:latest .
 
       - name: Run Docker container
         run: docker run --rm --name portfolio-app -d portfolio:latest
