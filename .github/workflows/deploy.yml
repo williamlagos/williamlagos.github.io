@@ -31,17 +31,13 @@ jobs:
 
       - name: Run Docker container
         run: |
-          docker run --rm -v $(pwd):/app -w /app node:18-alpine sh -c "npm install && npm run build"
-
-      - name: Create build artifact tarball
-        run: |
-          tar -czf dist.tar.gz dist
+          docker run --rm -v $(pwd):/app -w /app node:18-alpine sh -c "yarn install && yarn run build && tar -czf dist.tar.gz dist"
 
       - name: Upload build artifacts
         uses: actions/upload-artifact@v4
         with:
           name: github-pages
-          path: dist.tar.gz
+          path: ./dist.tar.gz
 
   # Deploy job
   deploy:
@@ -69,6 +65,7 @@ jobs:
         uses: actions/download-artifact@v4
         with:
           name: github-pages
+          path: ./dist.tar.gz
 
       - name: Deploy to GitHub Pages
         id: deployment

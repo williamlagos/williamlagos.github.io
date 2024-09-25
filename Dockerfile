@@ -8,13 +8,13 @@ WORKDIR /app
 COPY package.json yarn.lock ./
 
 # Install dependencies
-RUN npm install
+RUN yarn install
 
 # Copy the rest of the application code
 COPY . .
 
 # Build the application
-RUN npm run build
+RUN yarn run build
 
 # Use an official Nginx runtime as a parent image
 FROM nginx:alpine
