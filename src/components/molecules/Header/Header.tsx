@@ -1,15 +1,7 @@
 import styled from 'styled-components'
 
 import galaxyBackground from './assets/img/galaxy.jpg'
-import githubIcon from './assets/svg/github.svg'
-import linkedinIcon from './assets/svg/linkedin.svg'
 import lampIcon from './assets/svg/lamp.svg'
-import iconSizes from '../../../tokens/sizes'
-import spacing from '../../../tokens/spacing'
-
-const Icon = styled.img`
-  height: ${iconSizes.small};
-`
 
 const Galaxy = styled.div`
   display: flex;
@@ -44,44 +36,10 @@ const Highlight = styled.div`
   height: 100%;
 `
 
-const Links = styled.div`
-  margin: ${spacing.md};
-
-  a,
-  a:hover {
-    text-decoration: none;
-  }
-`
-
-const Top = styled.div`
-  display: flex;
-  justify-content: space-between;
-  width: 100vw;
-`
-
 const Header = () => (
   <div className="container-fluid p-0">
     <Galaxy>
       <Overlay>
-        <Top>
-          <Links>
-            <a
-              target="_blank"
-              href="https://www.github.com/williamlagos"
-              rel="noopener noreferrer"
-            >
-              <Icon className="img-fluid" alt="github" src={githubIcon} />
-            </a>
-            &nbsp;
-            <a
-              target="_blank"
-              href="https://www.linkedin.com/in/lagoswilliam"
-              rel="noopener noreferrer"
-            >
-              <Icon className="img-fluid" alt="linkedin" src={linkedinIcon} />
-            </a>
-          </Links>
-        </Top>
         <Highlight>
           <div className="container">
             <img src={lampIcon} width="192" alt="lamp" />
