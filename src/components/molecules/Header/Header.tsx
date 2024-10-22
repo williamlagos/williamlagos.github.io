@@ -5,7 +5,7 @@ import galaxyBackground from './assets/img/galaxy.jpg'
 const Galaxy = styled.div`
   display: flex;
   align-items: center;
-  height: 67vh;
+  height: 80vh;
   background: url('${galaxyBackground}');
   background-size: cover;
   filter: grayscale(100%);

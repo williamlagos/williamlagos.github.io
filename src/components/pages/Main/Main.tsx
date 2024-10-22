@@ -3,10 +3,11 @@ import { Layout } from '../../templates'
 
 const Main = () => (
   <Layout>
-    <Highlights />
     <Initiatives />
+
     <Projects />
     <OpenSource />
+    <Highlights />
   </Layout>
 )
 

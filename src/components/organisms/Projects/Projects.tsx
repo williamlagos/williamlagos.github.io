@@ -48,7 +48,7 @@ const Black = styled.div`
 
 const Projects = () => [
   <Black key="title" className="container-fluid">
-    <div className="container py-5">
+    <div className="container py-4">
       <div className="row">
         <div className="col-12">
           <h1 className="text-center">Third-Party Mobile and Web Projects</h1>
