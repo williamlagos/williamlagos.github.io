@@ -12,13 +12,16 @@ const Symbol = styled.img`
 `
 
 const OpenSource = () => (
-  <div className="container py-5">
+  <div className="container-fluid">
     <div className="row text-center">
-      <div className="col-12 pb-4">
+      <div className="col-12 py-4">
         <h1>Open Source Projects</h1>
       </div>
     </div>
-    <div className="row text-center">
+    <div
+      className="row text-center py-5"
+      style={{ background: '#FFFFFF', color: '#000000' }}
+    >
       <div className="col">
         <a
           target="_blank"

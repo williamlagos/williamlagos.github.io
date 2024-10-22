@@ -3,8 +3,8 @@ import styled from 'styled-components'
 import pandoraSvg from './assets/svg/pandora.svg'
 import coworkingSvg from './assets/svg/coworking.svg'
 import efforiaSvg from './assets/svg/efforia.svg'
-import hubSvg from './assets/svg/hub.svg'
-import eosSvg from './assets/svg/eos.svg'
+// import hubSvg from './assets/svg/hub.svg'
+// import eosSvg from './assets/svg/eos.svg'
 import iconSizes from '../../../tokens/sizes'
 
 const Brand = styled.img`
@@ -12,13 +12,19 @@ const Brand = styled.img`
 `
 
 const Initiatives = () => (
-  <div className="container pt-5">
-    <div className="row text-center">
+  <div className="container-fluid">
+    <div
+      className="row text-center pt-5"
+      style={{ background: '#040403', color: 'white' }}
+    >
       <div className="col-12 pb-5">
         <h1>Initiatives that I contributed as founder or co-founder</h1>
       </div>
     </div>
-    <div className="row text-center">
+    <div
+      className="row text-center pt-5"
+      style={{ background: '#FFFFFF', color: '#000000' }}
+    >
       <div className="col-md-4">
         <a
           target="_blank"
@@ -65,25 +71,26 @@ const Initiatives = () => (
         </div>
       </div>
     </div>
-    <div className="container py-5">
-      <div className="row py-3">
-        <div className="col-md-6 col-12">
-          <div className="row text-right">
-            <div className="col-9 d-flex align-items-center">
-              <p>
-                <strong>HUB:</strong> Nanocomputer raspberry pi based
-                development for commercial and residential automation.
-              </p>
-            </div>
-            <div className="col-3 d-flex justify-content-center">
-              <a
-                target="_blank"
-                href="https://williamlagos.github.io/pandora/hub/"
-                rel="noopener noreferrer"
-              >
-                <img className="img-fluid" alt="hub" src={hubSvg} />
-              </a>
-            </div>
+    {/* <div
+      className="row py-5"
+      style={{ background: '#FFFFFF', color: '#000000' }}
+    >
+      <div className="col-md-6 col-12">
+        <div className="row text-right">
+          <div className="col-9 d-flex align-items-center">
+            <p>
+              <strong>HUB:</strong> Nanocomputer raspberry pi based development
+              for commercial and residential automation.
+            </p>
+          </div>
+          <div className="col-3 d-flex justify-content-center">
+            <a
+              target="_blank"
+              href="https://williamlagos.github.io/pandora/hub/"
+              rel="noopener noreferrer"
+            >
+              <img className="img-fluid" alt="hub" src={hubSvg} />
+            </a>
           </div>
         </div>
         <div className="col-md-6 col-12">
@@ -106,7 +113,7 @@ const Initiatives = () => (
           </div>
         </div>
       </div>
-    </div>
+    </div> */}
   </div>
 )
 

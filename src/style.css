@@ -2,6 +2,8 @@ body {
     font-family: 'Roboto', sans-serif;
     margin: 0px;
     overflow-x: hidden;
+    background-color: #040403;
+    color: white;
 }
 
 a,
@@ -10,7 +12,15 @@ a:hover {
     color: white;
 }
 
-h1,
+h1 {
+    text-transform: uppercase;
+    font-weight: 500;
+}
+
 h2 {
-    font-weight: lighter;
+    font-weight: 300;
+}
+
+p {
+    font-weight: 100;
 }

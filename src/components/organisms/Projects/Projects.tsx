@@ -39,8 +39,6 @@ const GridItemContent = styled.div`
 const Black = styled.div`
   padding: ${spacing.sm};
   text-align: center;
-  background-color: #040403;
-  color: #ffffff;
 
   h1,
   h2 {

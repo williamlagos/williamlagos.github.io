@@ -1,12 +1,11 @@
 import styled from 'styled-components'
 
 import galaxyBackground from './assets/img/galaxy.jpg'
-import lampIcon from './assets/svg/lamp.svg'
 
 const Galaxy = styled.div`
   display: flex;
   align-items: center;
-  height: 80vh;
+  height: 67vh;
   background: url('${galaxyBackground}');
   background-size: cover;
   filter: grayscale(100%);
@@ -33,8 +32,14 @@ const Highlight = styled.div`
   display: flex;
   text-align: center;
   align-items: center;
+  flex-direction: row;
   width: 100%;
   height: 100%;
+`
+
+const HighlightHeading = styled.h1`
+  text-transform: uppercase;
+  font-size: 5em;
 `
 
 const Header = () => (
@@ -42,15 +47,16 @@ const Header = () => (
     <Galaxy>
       <Overlay>
         <Highlight>
-          <div className="container">
-            <img src={lampIcon} width="192" alt="lamp" />
+          <div className="container-fluid">
             <br />
             <br />
-            <h1>William Oliveira de Lagos</h1>
-            <h4>
-              Senior Software Engineer <br />
-              Python | C/C++ | TypeScript
-            </h4>
+            <HighlightHeading>
+              Hello, I'm William Oliveira de Lagos
+            </HighlightHeading>
+            <h2>
+              Software Engineer <br />
+              {/* Python | C/C++ | TypeScript */}
+            </h2>
           </div>
         </Highlight>
       </Overlay>
