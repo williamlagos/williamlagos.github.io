@@ -10,10 +10,14 @@ import iconSizes from '../../../tokens/sizes'
 
 const Art = styled.img`
   height: ${iconSizes.xlarge};
+  filter: invert(1);
 `
 
 const Highlights = () => (
-  <div className="container pt-5">
+  <div
+    className="container-fluid pt-5"
+    style={{ background: '#040403', color: 'white' }}
+  >
     <div className="row pt-5 text-center">
       <div className="col-6 col-md-2">
         <a

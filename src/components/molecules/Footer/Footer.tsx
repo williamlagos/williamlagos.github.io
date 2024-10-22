@@ -1,5 +1,8 @@
 const Footer = () => (
-  <footer className="py-3" style={{ display: 'block' }}>
+  <footer
+    className="py-3"
+    style={{ display: 'block', background: '#040403', color: 'white' }}
+  >
     <div className="container">
       <div className="row text-center contact">
         <div className="col-md-4">

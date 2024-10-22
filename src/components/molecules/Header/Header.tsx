@@ -9,6 +9,7 @@ const Galaxy = styled.div`
   height: 80vh;
   background: url('${galaxyBackground}');
   background-size: cover;
+  filter: grayscale(100%);
 
   h1,
   h2,
