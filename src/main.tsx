@@ -5,6 +5,7 @@ import { createBrowserRouter, RouterProvider } from 'react-router-dom'
 import { Main } from './components/pages'
 
 import './style.scss'
+import { Grommet } from 'grommet'
 
 const router = createBrowserRouter([
   {
@@ -15,6 +16,8 @@ const router = createBrowserRouter([
 
 createRoot(document.getElementById('root')!).render(
   <StrictMode>
-    <RouterProvider router={router} />
+    <Grommet>
+      <RouterProvider router={router} />
+    </Grommet>
   </StrictMode>
 )
