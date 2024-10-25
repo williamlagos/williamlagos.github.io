@@ -1,4 +1,5 @@
 import styled from 'styled-components'
+import { Box } from 'grommet'
 
 import pandoraSvg from './assets/svg/pandora.svg'
 import coworkingSvg from './assets/svg/coworking.svg'
@@ -16,7 +17,16 @@ const Brand = styled.img`
 `
 
 const Initiatives = () => (
-  <div className="container-fluid">
+  <Box
+    direction="row"
+    justify="center"
+    gap="large"
+    pad="medium"
+    style={{
+      background: '#FFFFFF',
+      color: '#000000'
+    }}
+  >
     {/* <div
       className="row text-center pt-5"
       style={{ background: '#040403', color: 'white' }}
@@ -25,79 +35,70 @@ const Initiatives = () => (
         <h1>Initiatives that I contributed as founder or co-founder</h1>
       </div>
     </div> */}
-    <div
-      className="row text-center py-4"
-      style={{
-        background: '#FFFFFF',
-        color: '#000000',
-        justifyContent: 'center'
-      }}
-    >
-      <div className="col p-4">
-        <a
-          target="_blank"
-          href="https://williamlagos.github.io/pandora/"
-          rel="noopener noreferrer"
-        >
-          <Brand alt="pandora" src={pandoraSvg} />
-        </a>
-        {/* <div className="py-4">
+    <div>
+      <a
+        target="_blank"
+        href="https://williamlagos.github.io/pandora/"
+        rel="noopener noreferrer"
+      >
+        <Brand alt="pandora" src={pandoraSvg} />
+      </a>
+      {/* <div className="py-4">
           <h2>Pandora Entertainment</h2>
           <h3>
             <strong>2011 - 2016</strong>
           </h3>
         </div> */}
-      </div>
-      <div className="col p-4">
-        <a
-          target="_blank"
-          href="https://williamlagos.github.io/coworking/"
-          rel="noopener noreferrer"
-        >
-          <Brand alt="coworking" src={coworkingSvg} />
-        </a>
-        {/* <div className="py-4">
+    </div>
+    <div>
+      <a
+        target="_blank"
+        href="https://williamlagos.github.io/coworking/"
+        rel="noopener noreferrer"
+      >
+        <Brand alt="coworking" src={coworkingSvg} />
+      </a>
+      {/* <div className="py-4">
           <h2>Fábrica de Ideias Coworking</h2>
           <h3>
             <strong>2013 - 2019</strong>
           </h3>
         </div> */}
-      </div>
-      <div className="col p-4">
-        <a
-          target="_blank"
-          href="https://williamlagos.github.io/efforia/"
-          rel="noopener noreferrer"
-        >
-          <Brand alt="efforia" src={efforiaSvg} />
-        </a>
-        {/* <div className="py-4">
+    </div>
+    <div>
+      <a
+        target="_blank"
+        href="https://williamlagos.github.io/efforia/"
+        rel="noopener noreferrer"
+      >
+        <Brand alt="efforia" src={efforiaSvg} />
+      </a>
+      {/* <div className="py-4">
           <h2>Efforia Invent Company</h2>
           <h3>
             <strong>2016 - 2021</strong>
           </h3>
         </div> */}
-      </div>
-      <div className="col p-4">
-        <a>
-          <Brand alt="bmw" src={bmwSvg} />
-        </a>
-      </div>
-      <div className="col p-4">
-        <a>
-          <Brand alt="bitwala" src={bitwalaSvg} />
-        </a>
-      </div>
-      <div className="col p-4">
-        <a>
-          <Brand alt="parloa" src={parloaSvg} />
-        </a>
-      </div>
-      <div className="col p-4">
-        <a>
-          <Brand alt="issuu" src={issuuSvg} />
-        </a>
-      </div>
+    </div>
+    <div>
+      <a>
+        <Brand alt="bmw" src={bmwSvg} />
+      </a>
+    </div>
+    <div>
+      <a>
+        <Brand alt="bitwala" src={bitwalaSvg} />
+      </a>
+    </div>
+    <div>
+      <a>
+        <Brand alt="parloa" src={parloaSvg} />
+      </a>
+    </div>
+    <div>
+      <a>
+        <Brand alt="issuu" src={issuuSvg} />
+      </a>
     </div>
     {/* <div
       className="row py-5"
@@ -142,7 +143,7 @@ const Initiatives = () => (
         </div>
       </div>
     </div> */}
-  </div>
+  </Box>
 )
 
 export default Initiatives

@@ -1,4 +1,5 @@
 import styled from 'styled-components'
+import { Box } from 'grommet'
 
 import djangoSvg from './assets/svg/django.svg'
 import synapseSvg from './assets/svg/synapse.svg'
@@ -12,14 +13,17 @@ const Symbol = styled.img`
 `
 
 const OpenSource = () => (
-  <div className="container-fluid">
+  <Box>
     <div className="row text-center">
       <div className="col-12 py-4">
         <h1>Open Source Projects</h1>
       </div>
     </div>
-    <div
-      className="row text-center py-5"
+    <Box
+      direction="row"
+      justify="center"
+      gap="large"
+      pad="medium"
       style={{ background: '#FFFFFF', color: '#000000' }}
     >
       <div className="col">
@@ -87,8 +91,8 @@ const OpenSource = () => (
           <p>Coding challenges and algorithms repositories</p>
         </div>
       </div>
-    </div>
-  </div>
+    </Box>
+  </Box>
 )
 
 export default OpenSource
