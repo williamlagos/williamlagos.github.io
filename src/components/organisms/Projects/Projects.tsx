@@ -11,14 +11,20 @@ import blockchainImg from './assets/img/blockchain.png'
 import spacing from '../../../tokens/spacing'
 
 // Styled components
-const GridItem = styled(Box)<{ $backgroundUrl: string; $weight: number }>`
+const MasonryGrid = styled(Box)`
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  grid-auto-flow: dense;
+  gap: ${spacing.sm};
+`
+
+const GridItem = styled(Box)<{ $backgroundUrl: string }>`
   background-image: url(${(props) => props.$backgroundUrl});
   background-size: cover !important;
   background-position: center !important;
   position: relative;
   color: white;
-  min-height: 500px;
-  flex: ${(props) => props.$weight} 1 500px;
+  min-height: 300px;
   &:hover {
     opacity: 0.8;
   }
@@ -57,28 +63,28 @@ const Projects: React.FC = () => {
       description: 'Coworking space landing page',
       img: workspacesImg,
       link: 'https://williamlagos.github.io/coworking',
-      weight: 1
+      weight: 6
     },
     {
       title: 'Frete Fácil',
       description: 'Freighter delivery app',
       img: kombiImg,
       link: 'https://williamlagos.github.io/kombi',
-      weight: 1
+      weight: 3
     },
     {
       title: 'Vupit',
       description: 'Beer distribution app',
       img: marktImg,
       link: 'https://williamlagos.github.io/markt',
-      weight: 1
+      weight: 3
     },
     {
       title: 'Grandir Capital Financeiro',
       description: 'Blockchain broker landing page',
       img: blockchainImg,
       link: 'https://williamlagos.github.io/blockchain',
-      weight: 1
+      weight: 2
     },
     {
       title: 'DanceApp',
@@ -103,19 +109,17 @@ const Projects: React.FC = () => {
           HERE ARE SOME STUFF THAT I’VE WORKED IN THE PAST
         </Heading>
       </Black>
-      <Box
-        direction="row"
+      <MasonryGrid
         margin={{ top: '10px' }}
         pad={{ horizontal: '10px' }}
         justify="center"
         responsive
-        wrap
       >
         {projects.map((project, index) => (
           <GridItem
             key={index}
             $backgroundUrl={project.img}
-            $weight={project.weight}
+            style={{ gridRowEnd: `span ${project.weight}` }}
           >
             <GridItemOverlay
               href={project.link}
@@ -127,7 +131,7 @@ const Projects: React.FC = () => {
             </GridItemOverlay>
           </GridItem>
         ))}
-      </Box>
+      </MasonryGrid>
     </>
   )
 }
