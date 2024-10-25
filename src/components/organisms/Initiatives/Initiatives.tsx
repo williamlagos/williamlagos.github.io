@@ -33,7 +33,7 @@ const Initiatives = () => (
         justifyContent: 'center'
       }}
     >
-      <div className="p-4">
+      <div className="col p-4">
         <a
           target="_blank"
           href="https://williamlagos.github.io/pandora/"
@@ -48,7 +48,7 @@ const Initiatives = () => (
           </h3>
         </div> */}
       </div>
-      <div className="p-4">
+      <div className="col p-4">
         <a
           target="_blank"
           href="https://williamlagos.github.io/coworking/"
@@ -63,7 +63,7 @@ const Initiatives = () => (
           </h3>
         </div> */}
       </div>
-      <div className="p-4">
+      <div className="col p-4">
         <a
           target="_blank"
           href="https://williamlagos.github.io/efforia/"
@@ -78,22 +78,22 @@ const Initiatives = () => (
           </h3>
         </div> */}
       </div>
-      <div className="p-4">
+      <div className="col p-4">
         <a>
           <Brand alt="bmw" src={bmwSvg} />
         </a>
       </div>
-      <div className="p-4">
+      <div className="col p-4">
         <a>
           <Brand alt="bitwala" src={bitwalaSvg} />
         </a>
       </div>
-      <div className="p-4">
+      <div className="col p-4">
         <a>
           <Brand alt="parloa" src={parloaSvg} />
         </a>
       </div>
-      <div className="p-4">
+      <div className="col p-4">
         <a>
           <Brand alt="issuu" src={issuuSvg} />
         </a>
