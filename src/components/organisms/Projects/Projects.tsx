@@ -1,4 +1,6 @@
+import React from 'react'
 import styled from 'styled-components'
+import { Box, Heading } from 'grommet'
 
 import kombiImg from './assets/img/kombi.png'
 import marktImg from './assets/img/markt.png'
@@ -8,32 +10,34 @@ import workspacesImg from './assets/img/workspaces.png'
 import blockchainImg from './assets/img/blockchain.png'
 import spacing from '../../../tokens/spacing'
 
-const GridItem = styled.div<{ $backgroundUrl: string }>`
-  min-height: 360px;
+// Styled components
+const GridItem = styled(Box)<{ $backgroundUrl: string; $weight: number }>`
+  background-image: url(${(props) => props.$backgroundUrl});
   background-size: cover !important;
   background-position: center !important;
-  padding: 0px !important;
-  min-width: calc(100% / 3);
-  background: url(${(props) => props.$backgroundUrl});
+  position: relative;
+  color: white;
+  min-height: 500px;
+  flex: ${(props) => props.$weight} 1 500px;
+  &:hover {
+    opacity: 0.8;
+  }
 `
 
 const GridItemOverlay = styled.a`
+  position: absolute;
+  top: 0;
+  left: 0;
   width: 100%;
   height: 100%;
-  min-height: 240px;
   background: rgba(0, 0, 0, 0.65);
   padding: 0px !important;
   text-decoration: none;
   display: flex;
+  flex-direction: column;
   align-content: center;
   align-items: center;
   justify-content: center;
-`
-
-const GridItemContent = styled.div`
-  text-decoration: none;
-  text-align: center;
-  color: white;
 `
 
 const Black = styled.div`
@@ -46,94 +50,86 @@ const Black = styled.div`
   }
 `
 
-const Projects = () => [
-  <Black key="title" className="container-fluid">
-    <div className="container py-4">
-      <div className="row">
-        <div className="col-12">
-          <h1 className="text-center">Third-Party Mobile and Web Projects</h1>
-        </div>
-      </div>
-    </div>
-  </Black>,
-  <div key="list" className="container-fluid grid">
-    <div className="row">
-      <GridItem $backgroundUrl={kombiImg}>
-        <GridItemOverlay
-          href="https://williamlagos.github.io/kombi"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <GridItemContent>
-            <h2>Frete Fácil</h2>
-            <p>Freighter delivery app</p>
-          </GridItemContent>
-        </GridItemOverlay>
-      </GridItem>
-      <GridItem $backgroundUrl={marktImg}>
-        <GridItemOverlay
-          href="https://williamlagos.github.io/markt"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <GridItemContent>
-            <h2>Vupit</h2>
-            <p>Beer distribution app</p>
-          </GridItemContent>
-        </GridItemOverlay>
-      </GridItem>
-      <GridItem $backgroundUrl={eventImg}>
-        <GridItemOverlay
-          href="https://github.com/williamlagos/events"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <GridItemContent>
-            <h2>DanceApp</h2>
-            <p>Events Application</p>
-          </GridItemContent>
-        </GridItemOverlay>
-      </GridItem>
-    </div>
-    <div className="row">
-      <GridItem $backgroundUrl={nasaImg}>
-        <GridItemOverlay
-          href="https://williamlagos.github.io/landing/"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <GridItemContent>
-            <h2>MoHub</h2>
-            <p>Landing Page lead capture</p>
-          </GridItemContent>
-        </GridItemOverlay>
-      </GridItem>
-      <GridItem $backgroundUrl={workspacesImg}>
-        <GridItemOverlay
-          href="https://williamlagos.github.io/coworking"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <GridItemContent>
-            <h2>Fábrica de Ideias Coworking</h2>
-            <p>Coworking space landing page</p>
-          </GridItemContent>
-        </GridItemOverlay>
-      </GridItem>
-      <GridItem $backgroundUrl={blockchainImg}>
-        <GridItemOverlay
-          href="https://williamlagos.github.io/blockchain"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <GridItemContent>
-            <h2>Grandir Capital Financeiro</h2>
-            <p>Blockchain broker landing page</p>
-          </GridItemContent>
-        </GridItemOverlay>
-      </GridItem>
-    </div>
-  </div>
-]
+const Projects: React.FC = () => {
+  const projects = [
+    {
+      title: 'Fábrica de Ideias Coworking',
+      description: 'Coworking space landing page',
+      img: workspacesImg,
+      link: 'https://williamlagos.github.io/coworking',
+      weight: 1
+    },
+    {
+      title: 'Frete Fácil',
+      description: 'Freighter delivery app',
+      img: kombiImg,
+      link: 'https://williamlagos.github.io/kombi',
+      weight: 1
+    },
+    {
+      title: 'Vupit',
+      description: 'Beer distribution app',
+      img: marktImg,
+      link: 'https://williamlagos.github.io/markt',
+      weight: 1
+    },
+    {
+      title: 'Grandir Capital Financeiro',
+      description: 'Blockchain broker landing page',
+      img: blockchainImg,
+      link: 'https://williamlagos.github.io/blockchain',
+      weight: 1
+    },
+    {
+      title: 'DanceApp',
+      description: 'Events Application',
+      img: eventImg,
+      link: 'https://github.com/williamlagos/events',
+      weight: 1
+    },
+    {
+      title: 'MoHub',
+      description: 'Landing Page lead capture',
+      img: nasaImg,
+      link: 'https://williamlagos.github.io/landing/',
+      weight: 1
+    }
+  ]
+
+  return (
+    <>
+      <Black>
+        <Heading fill level={2}>
+          HERE ARE SOME STUFF THAT I’VE WORKED IN THE PAST
+        </Heading>
+      </Black>
+      <Box
+        direction="row"
+        margin={{ top: '10px' }}
+        pad={{ horizontal: '10px' }}
+        justify="center"
+        responsive
+        wrap
+      >
+        {projects.map((project, index) => (
+          <GridItem
+            key={index}
+            $backgroundUrl={project.img}
+            $weight={project.weight}
+          >
+            <GridItemOverlay
+              href={project.link}
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <h2>{project.title}</h2>
+              <p>{project.description}</p>
+            </GridItemOverlay>
+          </GridItem>
+        ))}
+      </Box>
+    </>
+  )
+}
 
 export default Projects

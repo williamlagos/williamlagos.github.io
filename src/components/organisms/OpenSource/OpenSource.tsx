@@ -1,5 +1,5 @@
 import styled from 'styled-components'
-import { Box } from 'grommet'
+import { Box, Heading } from 'grommet'
 
 import djangoSvg from './assets/svg/django.svg'
 import synapseSvg from './assets/svg/synapse.svg'
@@ -12,13 +12,49 @@ const Symbol = styled.img`
   height: ${iconSizes.xxlarge};
 `
 
+const projects = [
+  {
+    href: 'https://github.com/williamlagos?tab=repositories&q=django&type=&language=&sort=',
+    alt: 'django',
+    src: djangoSvg,
+    title: 'Django'
+    // description: "A bunch of django packages"
+  },
+  {
+    href: 'https://github.com/williamlagos/synapse',
+    alt: 'synapse',
+    src: synapseSvg,
+    title: 'Synapse'
+    // description: "Smart process manager"
+  },
+  {
+    href: 'https://github.com/williamlagos/elements',
+    alt: 'elements',
+    src: elementsSvg,
+    title: 'Elements'
+    // description: "Reusable elements for games light framework"
+  },
+  {
+    href: 'https://github.com/williamlagos/contents',
+    alt: 'contents',
+    src: contentsSvg,
+    title: 'Contents'
+    // description: "Content Management Service headless platform"
+  },
+  {
+    href: 'https://github.com/williamlagos/coding',
+    alt: 'coding',
+    src: devSvg,
+    title: 'Coding'
+    // description: "Coding challenges and algorithms repositories"
+  }
+]
+
 const OpenSource = () => (
   <Box>
-    <div className="row text-center">
-      <div className="col-12 py-4">
-        <h1>Open Source Projects</h1>
-      </div>
-    </div>
+    {/* <Box align="center">
+      <Heading level={2}>OPEN SOURCE PROJECTS</Heading>
+    </Box> */}
     <Box
       direction="row"
       justify="center"
@@ -26,71 +62,20 @@ const OpenSource = () => (
       pad="medium"
       style={{ background: '#FFFFFF', color: '#000000' }}
     >
-      <div className="col">
-        <a
-          target="_blank"
-          href="https://github.com/williamlagos?tab=repositories&q=django&type=&language=&sort="
-          rel="noopener noreferrer"
-        >
-          <Symbol className="img-fluid" alt="django" src={djangoSvg} />
-        </a>
-        <div className="py-3">
-          <h2>Django</h2>
-          <p>A bunch of django packages</p>
-        </div>
-      </div>
-      <div className="col">
-        <a
-          target="_blank"
-          href="https://github.com/williamlagos/synapse"
-          rel="noopener noreferrer"
-        >
-          <Symbol className="img-fluid" alt="synapse" src={synapseSvg} />
-        </a>
-        <div className="py-3">
-          <h2>Synapse</h2>
-          <p>Smart process manager</p>
-        </div>
-      </div>
-      <div className="col">
-        <a
-          target="_blank"
-          href="https://github.com/williamlagos/elements"
-          rel="noopener noreferrer"
-        >
-          <Symbol className="img-fluid" alt="elements" src={elementsSvg} />
-        </a>
-        <div className="py-3">
-          <h2>Elements</h2>
-          <p>Reusable elements for games light framework</p>
-        </div>
-      </div>
-      <div className="col">
-        <a
-          target="_blank"
-          href="https://github.com/williamlagos/contents"
-          rel="noopener noreferrer"
-        >
-          <Symbol className="img-fluid" alt="contents" src={contentsSvg} />
-        </a>
-        <div className="py-3">
-          <h2>Contents</h2>
-          <p>Content Management Service headless platform</p>
-        </div>
-      </div>
-      <div className="col">
-        <a
-          target="_blank"
-          href="https://github.com/williamlagos/coding"
-          rel="noopener noreferrer"
-        >
-          <Symbol className="img-fluid" alt="coding" src={devSvg} />
-        </a>
-        <div className="py-3">
-          <h2>Coding</h2>
-          <p>Coding challenges and algorithms repositories</p>
-        </div>
-      </div>
+      {projects.map((project, index) => (
+        <Box key={index} align="center">
+          <a target="_blank" href={project.href} rel="noopener noreferrer">
+            <Symbol className="img-fluid" alt={project.alt} src={project.src} />
+          </a>
+          <h2>{project.title}</h2>
+          {/* <p>{project.description}</p> */}
+        </Box>
+      ))}
+      <Box basis="1/3">
+        <Heading level={2}>
+          HERE ARE SOME PROJECTS THAT I'M WORKING ON IT
+        </Heading>
+      </Box>
     </Box>
   </Box>
 )

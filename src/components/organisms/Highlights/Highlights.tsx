@@ -1,5 +1,5 @@
 import styled from 'styled-components'
-import { Box } from 'grommet'
+import { Box, Heading, Text } from 'grommet'
 
 import cloudSvg from './assets/svg/cloud.svg'
 import toolSvg from './assets/svg/tool.svg'
@@ -14,74 +14,85 @@ const Art = styled.img`
   filter: invert(1);
 `
 
-const Highlights = () => (
-  <Box
-    direction="row"
-    justify="center"
-    gap="large"
-    pad="medium"
-    className="container-fluid pt-5"
-    style={{ background: '#040403', color: 'white' }}
-  >
-    <div className="col-6 col-md-2">
-      <a
-        target="_blank"
-        href="https://www.github.com/williamlagos"
-        rel="noopener noreferrer"
-      >
-        <Art className="img-fluid" alt="cloud" src={githubIcon} />
-      </a>
-      <div className="py-4">
-        <h2>GitHub</h2>
-        <p>Here you can see what I'm developing right now.</p>
-      </div>
-    </div>
-
-    <div className="col-6 col-md-2">
-      <Art className="img-fluid" alt="cloud" src={cloudSvg} />
-      <div className="py-4">
-        <h2>DevOps</h2>
-        <p>Cloud hosting, deployment and maintenance specialist.</p>
-      </div>
-    </div>
-    <div className="col-6 col-md-2">
-      <Art className="img-fluid" alt="coding" src={toolSvg} />
-      <div className="py-4">
-        <h2>Develop</h2>
-        <p>I develop software solutions with Python, C/C++ and ECMAScript.</p>
-      </div>
-    </div>
-    <div className="col-6 col-md-2">
-      <Art className="img-fluid" alt="design" src={penToolSvg} />
-      <div className="py-4">
-        <h2>Design</h2>
-        <p>I do in a collaborated manner, new websites and apps designs.</p>
-      </div>
-    </div>
-    <div className="col-6 col-md-2">
-      <Art className="img-fluid" alt="mentorship" src={bookSvg} />
-      <div className="py-4">
-        <h2>Mentorship</h2>
-        <p>
-          I offer my knowledge to whoever does need to learn to develop or
-          create.
-        </p>
-      </div>
-    </div>
-    <div className="col-6 col-md-2">
-      <a
-        target="_blank"
-        href="https://www.linkedin.com/in/lagoswilliam"
-        rel="noopener noreferrer"
-      >
-        <Art className="img-fluid" alt="cloud" src={linkedinIcon} />
-      </a>
-      <div className="py-4">
-        <h2>LinkedIn</h2>
-        <p>Check my latest experiences here.</p>
-      </div>
-    </div>
-  </Box>
-)
+const Highlights = () => {
+  const highlightsData = [
+    {
+      href: 'https://www.github.com/williamlagos',
+      imgSrc: githubIcon,
+      alt: 'cloud',
+      heading: 'GitHub',
+      text: "Here you can see what I'm developing right now.",
+      isLink: true
+    },
+    {
+      imgSrc: cloudSvg,
+      alt: 'cloud',
+      heading: 'DevOps',
+      text: 'Cloud hosting, deployment and maintenance specialist.'
+    },
+    {
+      imgSrc: toolSvg,
+      alt: 'coding',
+      heading: 'Develop',
+      text: 'I develop software solutions with Python, C/C++ and ECMAScript.'
+    },
+    {
+      imgSrc: penToolSvg,
+      alt: 'design',
+      heading: 'Design',
+      text: 'I do in a collaborated manner, new websites and apps designs.'
+    },
+    {
+      imgSrc: bookSvg,
+      alt: 'mentorship',
+      heading: 'Mentorship',
+      text: 'I offer my knowledge to whoever does need to learn to develop or create.'
+    },
+    {
+      href: 'https://www.linkedin.com/in/lagoswilliam',
+      imgSrc: linkedinIcon,
+      alt: 'cloud',
+      heading: 'LinkedIn',
+      text: 'Check my latest experiences here.',
+      isLink: true
+    }
+  ]
+  return (
+    <Box
+      direction="row"
+      justify="center"
+      gap="large"
+      pad="medium"
+      className="container-fluid pt-5"
+      style={{ background: '#040403', color: 'white' }}
+    >
+      {highlightsData.map((highlight, index) => (
+        <Box key={index} direction="row" gap="25px">
+          {highlight.isLink ? (
+            <a target="_blank" href={highlight.href} rel="noopener noreferrer">
+              <Art
+                className="img-fluid"
+                alt={highlight.alt}
+                src={highlight.imgSrc}
+              />
+            </a>
+          ) : (
+            <Art
+              className="img-fluid"
+              alt={highlight.alt}
+              src={highlight.imgSrc}
+            />
+          )}
+          <div>
+            <Heading weight="normal" margin="0" level={4}>
+              {highlight.heading}
+            </Heading>
+            <Text weight="lighter">{highlight.text}</Text>
+          </div>
+        </Box>
+      ))}
+    </Box>
+  )
+}
 
 export default Highlights
