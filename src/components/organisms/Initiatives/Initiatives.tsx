@@ -37,9 +37,10 @@ const Initiatives = () => (
     </div> */}
     <div>
       <a
-        target="_blank"
-        href="https://williamlagos.github.io/pandora/"
-        rel="noopener noreferrer"
+        href="#hub"
+        // target="_blank"
+        // href="https://williamlagos.github.io/pandora/"
+        // rel="noopener noreferrer"
       >
         <Brand alt="pandora" src={pandoraSvg} />
       </a>
@@ -68,9 +69,10 @@ const Initiatives = () => (
     </div>
     <div>
       <a
-        target="_blank"
-        href="https://williamlagos.github.io/efforia/"
-        rel="noopener noreferrer"
+        href="#efforia"
+        // target="_blank"
+        // href="https://williamlagos.github.io/efforia/"
+        // rel="noopener noreferrer"
       >
         <Brand alt="efforia" src={efforiaSvg} />
       </a>
@@ -82,22 +84,22 @@ const Initiatives = () => (
         </div> */}
     </div>
     <div>
-      <a>
+      <a href="#bmw">
         <Brand alt="bmw" src={bmwSvg} />
       </a>
     </div>
     <div>
-      <a>
+      <a href="#blockchain">
         <Brand alt="bitwala" src={bitwalaSvg} />
       </a>
     </div>
     <div>
-      <a>
+      <a href="#parloa">
         <Brand alt="parloa" src={parloaSvg} />
       </a>
     </div>
     <div>
-      <a>
+      <a href="#issuu">
         <Brand alt="issuu" src={issuuSvg} />
       </a>
     </div>

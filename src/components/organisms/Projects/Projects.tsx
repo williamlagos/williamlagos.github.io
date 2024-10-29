@@ -5,7 +5,7 @@ import { Box, Heading, Grid, ResponsiveContext } from 'grommet'
 import kombiImg from './assets/img/kombi.png'
 import marktImg from './assets/img/markt.png'
 import eventImg from './assets/img/event.png'
-import nasaImg from './assets/img/nasa.png'
+import lampsImg from './assets/img/lamps.png'
 import bmwImg from './assets/img/bmw.jpg'
 import lightsImg from './assets/img/lights.webp'
 import workspacesImg from './assets/img/workspaces.png'
@@ -75,43 +75,62 @@ const Projects: React.FC = () => {
 
   const gridProps = {
     small: {
-      rows: ['50vh', '50vh', '50vh', '50vh', '50vh', '50vh'],
+      rows: [
+        '50vh',
+        '50vh',
+        '50vh',
+        '50vh',
+        '50vh',
+        '50vh',
+        '50vh',
+        '50vh',
+        '50vh',
+        '50vh'
+      ],
       columns: ['100vw'],
-      areas: [
-        { name: 'coworking', start: [0, 0], end: [0, 0] },
-        { name: 'delivery', start: [0, 1], end: [0, 1] },
-        { name: 'market', start: [0, 2], end: [0, 2] },
-        { name: 'blockchain', start: [0, 3], end: [0, 3] },
-        { name: 'events', start: [0, 4], end: [0, 4] },
-        { name: 'landing', start: [0, 5], end: [0, 5] }
-      ]
-    },
-    medium: {
-      rows: ['25vh', '25vh', '25vh', '25vh'],
-      columns: ['50vw', '50vw'],
-      areas: [
-        { name: 'coworking', start: [0, 0], end: [1, 0] },
-        { name: 'delivery', start: [0, 1], end: [0, 1] },
-        { name: 'market', start: [1, 1], end: [1, 1] },
-        { name: 'blockchain', start: [0, 2], end: [0, 2] },
-        { name: 'events', start: [1, 2], end: [1, 2] },
-        { name: 'landing', start: [0, 3], end: [1, 3] }
-      ]
-    },
-    large: {
-      rows: ['25vh', '25vh', '25vh', '25vh'],
-      columns: ['25vw', '25vw', '25vw', '25vw'],
       areas: [
         { name: 'hub', start: [0, 0], end: [0, 0] },
         { name: 'bmw', start: [0, 1], end: [0, 1] },
-        { name: 'coworking', start: [1, 0], end: [1, 1] },
-        { name: 'delivery', start: [2, 0], end: [2, 0] },
-        { name: 'landing', start: [2, 1], end: [2, 1] },
-        { name: 'market', start: [3, 0], end: [3, 0] },
-        { name: 'events', start: [3, 1], end: [3, 1] },
-        { name: 'blockchain', start: [0, 2], end: [0, 2] },
-        { name: 'parloa', start: [1, 2], end: [1, 2] },
-        { name: 'issuu', start: [2, 2], end: [2, 2] }
+        { name: 'parloa', start: [0, 2], end: [0, 2] },
+        { name: 'efforia', start: [0, 3], end: [0, 3] },
+        { name: 'coworking', start: [0, 4], end: [0, 4] },
+        { name: 'blockchain', start: [0, 5], end: [0, 5] },
+        { name: 'delivery', start: [0, 6], end: [0, 6] },
+        { name: 'issuu', start: [0, 7], end: [0, 7] },
+        { name: 'market', start: [0, 8], end: [0, 8] },
+        { name: 'events', start: [0, 9], end: [0, 9] }
+      ]
+    },
+    medium: {
+      rows: ['50vh', '25vh', '25vh', '25vh', '25vh', '25vh'],
+      columns: ['50vw', '50vw'],
+      areas: [
+        { name: 'bmw', start: [0, 0], end: [1, 0] },
+        { name: 'hub', start: [0, 1], end: [0, 1] },
+        { name: 'coworking', start: [1, 1], end: [1, 1] },
+        { name: 'efforia', start: [0, 2], end: [0, 2] },
+        { name: 'issuu', start: [1, 2], end: [1, 2] },
+        { name: 'parloa', start: [0, 3], end: [1, 3] },
+        { name: 'blockchain', start: [0, 4], end: [0, 4] },
+        { name: 'delivery', start: [1, 4], end: [1, 4] },
+        { name: 'market', start: [0, 5], end: [0, 5] },
+        { name: 'events', start: [1, 5], end: [1, 5] }
+      ]
+    },
+    large: {
+      rows: ['25vh', '25vh', '25vh', '25vh', '25vh'],
+      columns: ['25vw', '25vw', '25vw', '25vw'],
+      areas: [
+        { name: 'blockchain', start: [0, 0], end: [0, 0] },
+        { name: 'parloa', start: [1, 0], end: [2, 0] },
+        { name: 'issuu', start: [3, 0], end: [3, 0] },
+        { name: 'bmw', start: [0, 1], end: [1, 2] },
+        { name: 'hub', start: [2, 1], end: [3, 2] },
+        { name: 'coworking', start: [0, 3], end: [1, 4] },
+        { name: 'efforia', start: [2, 3], end: [2, 3] },
+        { name: 'delivery', start: [3, 3], end: [3, 3] },
+        { name: 'market', start: [2, 4], end: [2, 4] },
+        { name: 'events', start: [3, 4], end: [3, 4] }
       ]
     }
   }
@@ -168,11 +187,11 @@ const Projects: React.FC = () => {
       gridArea: 'events'
     },
     {
-      title: 'MoHub',
-      description: 'Landing Page lead capture',
-      img: nasaImg,
-      link: 'https://williamlagos.github.io/landing/',
-      gridArea: 'landing'
+      title: 'Efforia',
+      description: 'Venture building for startups',
+      img: lampsImg,
+      link: 'https://williamlagos.github.io/efforia/',
+      gridArea: 'efforia'
     },
     {
       title: 'Parloa',
