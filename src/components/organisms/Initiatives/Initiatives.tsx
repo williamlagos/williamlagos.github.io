@@ -52,9 +52,10 @@ const Initiatives = () => (
     </div>
     <div>
       <a
-        target="_blank"
-        href="https://williamlagos.github.io/coworking/"
-        rel="noopener noreferrer"
+        href="#coworking"
+        // target="_blank"
+        // href="https://williamlagos.github.io/coworking/"
+        // rel="noopener noreferrer"
       >
         <Brand alt="coworking" src={coworkingSvg} />
       </a>
