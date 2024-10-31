@@ -1,4 +1,4 @@
-import { Highlights, Initiatives, Projects, OpenSource } from '../../organisms'
+import { Initiatives, Projects, OpenSource } from '../../organisms'
 import { Layout } from '../../templates'
 
 const Main = () => (
@@ -7,7 +7,6 @@ const Main = () => (
 
     <Projects />
     <OpenSource />
-    <Highlights />
   </Layout>
 )
 
