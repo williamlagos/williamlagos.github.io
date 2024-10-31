@@ -14,6 +14,14 @@ import iconSizes from '../../../tokens/sizes'
 
 const Brand = styled.img`
   height: ${iconSizes.xxlarge};
+
+  @media (max-width: 768px) {
+    height: ${iconSizes.large};
+  }
+
+  @media (max-width: 480px) {
+    height: ${iconSizes.medium};
+  }
 `
 
 const Initiatives = () => (
@@ -22,6 +30,7 @@ const Initiatives = () => (
     justify="center"
     gap="large"
     pad="medium"
+    wrap={true}
     style={{
       background: '#FFFFFF',
       color: '#000000'

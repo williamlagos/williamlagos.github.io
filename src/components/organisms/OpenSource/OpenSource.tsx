@@ -10,6 +10,14 @@ import iconSizes from '../../../tokens/sizes'
 
 const Symbol = styled.img`
   height: ${iconSizes.xxlarge};
+
+  @media (max-width: 768px) {
+    height: ${iconSizes.large};
+  }
+
+  @media (max-width: 480px) {
+    height: ${iconSizes.medium};
+  }
 `
 
 const projects = [
@@ -60,6 +68,7 @@ const OpenSource = () => (
       justify="center"
       gap="large"
       pad="medium"
+      wrap={true}
       style={{ background: '#FFFFFF', color: '#000000' }}
     >
       {projects.map((project, index) => (
@@ -71,7 +80,7 @@ const OpenSource = () => (
           {/* <p>{project.description}</p> */}
         </Box>
       ))}
-      <Box basis="1/3">
+      <Box>
         <Heading level={2}>
           HERE ARE SOME PROJECTS THAT I'M WORKING ON IT
         </Heading>

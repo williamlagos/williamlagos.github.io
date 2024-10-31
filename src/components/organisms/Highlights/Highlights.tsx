@@ -12,6 +12,14 @@ import iconSizes from '../../../tokens/sizes'
 const Art = styled.img`
   height: ${iconSizes.xlarge};
   filter: invert(1);
+
+  @media (max-width: 768px) {
+    height: ${iconSizes.large};
+  }
+
+  @media (max-width: 480px) {
+    height: ${iconSizes.medium};
+  }
 `
 
 const Highlights = () => {
@@ -63,7 +71,7 @@ const Highlights = () => {
       justify="center"
       gap="large"
       pad="medium"
-      className="container-fluid pt-5"
+      wrap={true}
       style={{ background: '#040403', color: 'white' }}
     >
       {highlightsData.map((highlight, index) => (
