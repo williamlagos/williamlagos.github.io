@@ -7,6 +7,11 @@ import bookSvg from './assets/svg/book.svg'
 import githubIcon from './assets/svg/github.svg'
 import linkedinIcon from './assets/svg/linkedin.svg'
 import berlinIcon from './assets/svg/berlin.svg'
+import brazilIcon from './assets/svg/brazil.svg'
+import usaIcon from './assets/svg/usa.svg'
+import spainIcon from './assets/svg/spain.svg'
+import italyIcon from './assets/svg/italy.svg'
+import germanyIcon from './assets/svg/germany.svg'
 import iconSizes from '../../../tokens/sizes'
 
 const Art = styled.img`
@@ -23,6 +28,10 @@ const Art = styled.img`
     width: ${iconSizes.medium};
     height: ${iconSizes.medium};
   }
+`
+
+const Flag = styled.img`
+  height: ${iconSizes.small};
 `
 
 const Footer = () => {
@@ -89,6 +98,14 @@ const Footer = () => {
           <Anchor href="mailto:william.lagos@icloud.com">
             william.lagos@icloud.com
           </Anchor>
+          <br />
+          <Box direction="row">
+            <Flag src={usaIcon}></Flag>
+            <Flag src={brazilIcon}></Flag>
+            <Flag src={spainIcon}></Flag>
+            <Flag src={italyIcon}></Flag>
+            <Flag src={germanyIcon}></Flag>
+          </Box>
         </Box>
         {highlightsData.map((highlight, index) => (
           <Box key={index} direction="row" gap="25px" pad="small">
