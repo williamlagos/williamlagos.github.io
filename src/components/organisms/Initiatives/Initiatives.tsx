@@ -4,7 +4,7 @@ import { Box } from 'grommet'
 import pandoraSvg from './assets/svg/pandora.svg'
 import coworkingSvg from './assets/svg/coworking.svg'
 import efforiaSvg from './assets/svg/efforia.svg'
-import bitwalaSvg from './assets/svg/bitwala_logo.jpeg'
+// import bitwalaSvg from './assets/svg/bitwala_logo.jpeg'
 import parloaSvg from './assets/svg/parloa.svg'
 import bmwSvg from './assets/svg/bmw.svg'
 import issuuSvg from './assets/svg/issuu.svg'
@@ -29,7 +29,7 @@ const Initiatives = () => (
     direction="row"
     justify="center"
     gap="large"
-    pad="medium"
+    pad="large"
     wrap={true}
     style={{
       background: '#FFFFFF',

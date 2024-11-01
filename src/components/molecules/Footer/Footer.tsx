@@ -111,7 +111,7 @@ const Footer = () => {
               : ['auto', 'auto']
           }
           gap="medium"
-          pad={'large'}
+          pad={'xlarge'}
           style={{ background: '#040403', color: 'white' }}
           responsive
         >
@@ -156,7 +156,7 @@ const Footer = () => {
                 <Art alt={highlight.alt} src={highlight.imgSrc} />
               )}
               <div>
-                <Heading weight="normal" margin="0" level={4}>
+                <Heading weight="normal" margin="0" level={3}>
                   {highlight.heading}
                 </Heading>
                 <Text weight="lighter">{highlight.text}</Text>

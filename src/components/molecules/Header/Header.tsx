@@ -1,14 +1,14 @@
 import styled from 'styled-components'
 import { Box, Heading } from 'grommet'
 
-import galaxyBackground from './assets/img/galaxy.jpg'
+import galaxyBackground from './assets/img/galaxy2.png'
 
 const Galaxy = styled.div`
   display: flex;
   height: 50vh;
   background: url('${galaxyBackground}');
   background-size: cover;
-  filter: brightness(50%) contrast(200%);
+  // filter: brightness(50%) contrast(200%);
 
   h1,
   h2,
@@ -24,7 +24,8 @@ const Overlay = styled.div`
   flex-direction: column;
   height: 100%;
   width: 100%;
-  background: rgba(135, 107, 178, 0.7); /* Adjust the alpha value as needed */
+  // background: rgba(135, 107, 178, 0.7); /* Adjust the alpha value as needed */
+  background: rgba(0, 0, 0, 0.7);
   background-size: cover;
 `
 
