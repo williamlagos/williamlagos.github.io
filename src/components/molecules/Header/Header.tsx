@@ -1,14 +1,14 @@
 import styled from 'styled-components'
-import { Box, PageHeader } from 'grommet'
+import { Box, Heading } from 'grommet'
 
 import galaxyBackground from './assets/img/galaxy.jpg'
 
 const Galaxy = styled.div`
   display: flex;
-  height: 80vh;
+  height: 50vh;
   background: url('${galaxyBackground}');
   background-size: cover;
-  filter: grayscale(100%);
+  filter: brightness(50%) contrast(200%);
 
   h1,
   h2,
@@ -24,7 +24,7 @@ const Overlay = styled.div`
   flex-direction: column;
   height: 100%;
   width: 100%;
-  background: rgba(0, 0, 0, 0.6);
+  background: rgba(135, 107, 178, 0.7); /* Adjust the alpha value as needed */
   background-size: cover;
 `
 
@@ -37,10 +37,7 @@ const Header = () => (
   <Galaxy>
     <Overlay>
       <Highlight align="center" justify="center" direction="row">
-        <PageHeader
-          title="Hello, I'm William Oliveira de Lagos"
-          subtitle="Software Engineer"
-        />
+        <Heading level={1}>Hello, I'm William Oliveira de Lagos</Heading>
       </Highlight>
     </Overlay>
   </Galaxy>

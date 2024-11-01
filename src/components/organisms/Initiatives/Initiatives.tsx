@@ -97,11 +97,11 @@ const Initiatives = () => (
         <Brand alt="bmw" src={bmwSvg} />
       </a>
     </div>
-    <div>
+    {/* <div>
       <a href="#blockchain">
         <Brand alt="bitwala" src={bitwalaSvg} />
       </a>
-    </div>
+    </div> */}
     <div>
       <a href="#parloa">
         <Brand alt="parloa" src={parloaSvg} />

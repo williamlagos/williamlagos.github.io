@@ -4,7 +4,6 @@ import { Layout } from '../../templates'
 const Main = () => (
   <Layout>
     <Initiatives />
-
     <Projects />
     <OpenSource />
   </Layout>

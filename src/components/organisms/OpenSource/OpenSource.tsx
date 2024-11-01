@@ -82,7 +82,7 @@ const OpenSource = () => (
       ))}
       <Box>
         <Heading level={2}>
-          HERE ARE SOME PROJECTS THAT I'M WORKING ON IT
+          HERE ARE SOME PROJECTS THAT I'M WORKING ON IT RIGHT NOW
         </Heading>
       </Box>
     </Box>
