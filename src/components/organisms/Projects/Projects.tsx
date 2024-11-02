@@ -1,46 +1,53 @@
+import React, { useContext } from 'react'
 import styled from 'styled-components'
+import { Box, Heading, Grid, ResponsiveContext } from 'grommet'
 
 import kombiImg from './assets/img/kombi.png'
 import marktImg from './assets/img/markt.png'
 import eventImg from './assets/img/event.png'
-import nasaImg from './assets/img/nasa.png'
+import lampsImg from './assets/img/lamps.png'
+import bmwImg from './assets/img/bmw.jpg'
+import lightsImg from './assets/img/lights.webp'
 import workspacesImg from './assets/img/workspaces.png'
 import blockchainImg from './assets/img/blockchain.png'
+import berlinImg from './assets/img/berlin.png'
+import copenhagenImg from './assets/img/copenhagen.png'
 import spacing from '../../../tokens/spacing'
 
-const GridItem = styled.div<{ $backgroundUrl: string }>`
-  min-height: 360px;
+// Styled components
+const GridItem = styled(Box)<{ $backgroundUrl: string }>`
+  background-image: url(${(props) => props.$backgroundUrl});
   background-size: cover !important;
   background-position: center !important;
-  padding: 0px !important;
-  min-width: calc(100% / 3);
-  background: url(${(props) => props.$backgroundUrl});
+  position: relative;
+  color: white;
+  width: 100%;
+  height: 100%;
+  &:hover {
+    opacity: 0.8;
+  }
 `
 
 const GridItemOverlay = styled.a`
+  position: absolute;
+  top: 0;
+  left: 0;
   width: 100%;
   height: 100%;
-  min-height: 240px;
   background: rgba(0, 0, 0, 0.65);
   padding: 0px !important;
   text-decoration: none;
+  text-align: center;
   display: flex;
+  flex-direction: column;
   align-content: center;
   align-items: center;
   justify-content: center;
 `
 
-const GridItemContent = styled.div`
-  text-decoration: none;
-  text-align: center;
-  color: white;
-`
-
 const Black = styled.div`
-  padding: ${spacing.md};
+  padding: ${spacing.sm};
   text-align: center;
-  background-color: #000;
-  color: #ffffff;
 
   h1,
   h2 {
@@ -48,94 +55,188 @@ const Black = styled.div`
   }
 `
 
-const Projects = () => [
-  <Black key="title" className="container-fluid">
-    <div className="container py-5">
-      <div className="row">
-        <div className="col-12">
-          <h1 className="text-center">Third-Party Mobile and Web Projects</h1>
-        </div>
-      </div>
-    </div>
-  </Black>,
-  <div key="list" className="container-fluid grid">
-    <div className="row">
-      <GridItem $backgroundUrl={kombiImg}>
-        <GridItemOverlay
-          href="https://williamlagos.github.io/kombi"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <GridItemContent>
-            <h2>Frete Fácil</h2>
-            <p>Freighter delivery app</p>
-          </GridItemContent>
-        </GridItemOverlay>
-      </GridItem>
-      <GridItem $backgroundUrl={marktImg}>
-        <GridItemOverlay
-          href="https://williamlagos.github.io/markt"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <GridItemContent>
-            <h2>Vupit</h2>
-            <p>Beer distribution app</p>
-          </GridItemContent>
-        </GridItemOverlay>
-      </GridItem>
-      <GridItem $backgroundUrl={eventImg}>
-        <GridItemOverlay
-          href="https://github.com/williamlagos/events"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <GridItemContent>
-            <h2>DanceApp</h2>
-            <p>Events Application</p>
-          </GridItemContent>
-        </GridItemOverlay>
-      </GridItem>
-    </div>
-    <div className="row">
-      <GridItem $backgroundUrl={nasaImg}>
-        <GridItemOverlay
-          href="https://williamlagos.github.io/landing/"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <GridItemContent>
-            <h2>MoHub</h2>
-            <p>Landing Page lead capture</p>
-          </GridItemContent>
-        </GridItemOverlay>
-      </GridItem>
-      <GridItem $backgroundUrl={workspacesImg}>
-        <GridItemOverlay
-          href="https://williamlagos.github.io/coworking"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <GridItemContent>
-            <h2>Fábrica de Ideias Coworking</h2>
-            <p>Coworking space landing page</p>
-          </GridItemContent>
-        </GridItemOverlay>
-      </GridItem>
-      <GridItem $backgroundUrl={blockchainImg}>
-        <GridItemOverlay
-          href="https://williamlagos.github.io/blockchain"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <GridItemContent>
-            <h2>Grandir Capital Financeiro</h2>
-            <p>Blockchain broker landing page</p>
-          </GridItemContent>
-        </GridItemOverlay>
-      </GridItem>
-    </div>
-  </div>
-]
+const Project: React.FC<{
+  title: string
+  description: string
+  img: string
+  link: string
+  gridArea: string
+}> = ({ title, description, img, link, gridArea }) => (
+  <GridItem id={gridArea} gridArea={gridArea} $backgroundUrl={img}>
+    <GridItemOverlay href={link} target="_blank" rel="noopener noreferrer">
+      <h2>{title}</h2>
+      <p>{description}</p>
+    </GridItemOverlay>
+  </GridItem>
+)
+
+const Projects: React.FC = () => {
+  const size = useContext(ResponsiveContext) as keyof typeof gridProps
+
+  const gridProps = {
+    small: {
+      rows: [
+        '50vh',
+        '50vh',
+        '50vh',
+        '50vh',
+        '50vh',
+        '50vh',
+        '50vh',
+        '50vh',
+        '50vh',
+        '50vh'
+      ],
+      columns: ['100vw'],
+      areas: [
+        { name: 'hub', start: [0, 0], end: [0, 0] },
+        { name: 'bmw', start: [0, 1], end: [0, 1] },
+        { name: 'parloa', start: [0, 2], end: [0, 2] },
+        { name: 'efforia', start: [0, 3], end: [0, 3] },
+        { name: 'coworking', start: [0, 4], end: [0, 4] },
+        { name: 'blockchain', start: [0, 5], end: [0, 5] },
+        { name: 'delivery', start: [0, 6], end: [0, 6] },
+        { name: 'issuu', start: [0, 7], end: [0, 7] },
+        { name: 'market', start: [0, 8], end: [0, 8] },
+        { name: 'events', start: [0, 9], end: [0, 9] }
+      ]
+    },
+    medium: {
+      rows: ['50vh', '25vh', '25vh', '25vh', '25vh', '25vh'],
+      columns: ['50vw', '50vw'],
+      areas: [
+        { name: 'bmw', start: [0, 0], end: [1, 0] },
+        { name: 'hub', start: [0, 1], end: [0, 1] },
+        { name: 'coworking', start: [1, 1], end: [1, 1] },
+        { name: 'efforia', start: [0, 2], end: [0, 2] },
+        { name: 'issuu', start: [1, 2], end: [1, 2] },
+        { name: 'parloa', start: [0, 3], end: [1, 3] },
+        { name: 'blockchain', start: [0, 4], end: [0, 4] },
+        { name: 'delivery', start: [1, 4], end: [1, 4] },
+        { name: 'market', start: [0, 5], end: [0, 5] },
+        { name: 'events', start: [1, 5], end: [1, 5] }
+      ]
+    },
+    large: {
+      rows: ['25vh', '25vh', '25vh', '25vh', '25vh'],
+      columns: ['25vw', '25vw', '25vw', '25vw'],
+      areas: [
+        { name: 'blockchain', start: [0, 0], end: [0, 0] },
+        { name: 'parloa', start: [1, 0], end: [2, 0] },
+        { name: 'issuu', start: [3, 0], end: [3, 0] },
+        { name: 'bmw', start: [0, 1], end: [1, 2] },
+        { name: 'hub', start: [2, 1], end: [3, 2] },
+        { name: 'coworking', start: [0, 3], end: [1, 4] },
+        { name: 'efforia', start: [2, 3], end: [2, 3] },
+        { name: 'delivery', start: [3, 3], end: [3, 3] },
+        { name: 'market', start: [2, 4], end: [2, 4] },
+        { name: 'events', start: [3, 4], end: [3, 4] }
+      ]
+    }
+  }
+
+  const projects = [
+    {
+      title: 'Pandora HUB',
+      description:
+        'Nanocomputer raspberry pi based development for commercial and residential automation',
+      img: lightsImg,
+      link: 'https://williamlagos.github.io/pandora/hub/',
+      gridArea: 'hub'
+    },
+    {
+      title: 'BMW iX',
+      description: 'BMW Autonomous Vehicle Platform Engineering',
+      img: bmwImg,
+      link: 'https://www.bmw.com/en/events/nextgen/reveal-bmw-ix.html',
+      gridArea: 'bmw'
+    },
+    {
+      title: 'Fábrica de Ideias Coworking',
+      description: 'Coworking space landing page',
+      img: workspacesImg,
+      link: 'https://williamlagos.github.io/coworking',
+      gridArea: 'coworking'
+    },
+    {
+      title: 'Frete Fácil',
+      description: 'Freighter delivery app',
+      img: kombiImg,
+      link: 'https://williamlagos.github.io/kombi',
+      gridArea: 'delivery'
+    },
+    {
+      title: 'Vupit',
+      description: 'Beer distribution app',
+      img: marktImg,
+      link: 'https://williamlagos.github.io/markt',
+      gridArea: 'market'
+    },
+    {
+      title: 'Bitwala',
+      description: 'And other experiences on blockchain',
+      img: blockchainImg,
+      link: 'https://williamlagos.github.io/blockchain',
+      gridArea: 'blockchain'
+    },
+    {
+      title: 'DanceApp',
+      description: 'Events Application',
+      img: eventImg,
+      link: 'https://github.com/williamlagos/events',
+      gridArea: 'events'
+    },
+    {
+      title: 'Efforia',
+      description: 'Venture building for startups',
+      img: lampsImg,
+      link: 'https://williamlagos.github.io/efforia/',
+      gridArea: 'efforia'
+    },
+    {
+      title: 'Parloa',
+      description:
+        'Real-time translation chat application on Berlin-based Scaleup',
+      img: berlinImg,
+      link: 'https://www.parloa.com/platform/assist/',
+      gridArea: 'parloa'
+    },
+    {
+      title: 'Issuu',
+      description:
+        'Digital Publishing Platform development on Copenhagen-based Scaleup',
+      img: copenhagenImg,
+      link: 'https://www.issuu.com',
+      gridArea: 'issuu'
+    }
+  ]
+
+  return (
+    <>
+      <Black>
+        <Heading fill level={2}>
+          HERE ARE SOME STUFF THAT I’VE WORKED IN THE PAST
+        </Heading>
+      </Black>
+      <Grid
+        justify="center"
+        rows={gridProps[size].rows}
+        columns={gridProps[size].columns}
+        areas={gridProps[size].areas}
+      >
+        {projects.map(({ gridArea, title, description, img, link }) => (
+          <Project
+            key={gridArea}
+            title={title}
+            description={description}
+            img={img}
+            link={link}
+            gridArea={gridArea}
+          />
+        ))}
+      </Grid>
+    </>
+  )
+}
 
 export default Projects
