@@ -26,43 +26,35 @@ const projects = [
     alt: 'python',
     src: djangoSvg,
     title: 'Python Packages'
-    // description: "A bunch of django packages"
   },
   {
     href: 'https://github.com/williamlagos/eos',
     alt: 'eos',
     src: synapseSvg,
     title: 'Docker Images'
-    // description: "Smart process manager"
   },
   {
     href: 'https://github.com/williamlagos/elements',
     alt: 'elements',
     src: elementsSvg,
     title: 'Game Engine'
-    // description: "Reusable elements for games light framework"
   },
   {
     href: 'https://github.com/williamlagos/contents',
     alt: 'contents',
     src: contentsSvg,
     title: 'Headless CMS'
-    // description: "Content Management Service headless platform"
   },
   {
     href: 'https://github.com/williamlagos/coding',
     alt: 'coding',
     src: devSvg,
     title: 'Coding Challenges'
-    // description: "Coding challenges and algorithms repositories"
   }
 ]
 
 const OpenSource = () => (
   <Box>
-    {/* <Box align="center">
-      <Heading level={2}>OPEN SOURCE PROJECTS</Heading>
-    </Box> */}
     <Box
       direction="row"
       justify="center"
@@ -77,7 +69,6 @@ const OpenSource = () => (
             <Symbol className="img-fluid" alt={project.alt} src={project.src} />
           </a>
           <h2>{project.title}</h2>
-          {/* <p>{project.description}</p> */}
         </Box>
       ))}
       <Box>
