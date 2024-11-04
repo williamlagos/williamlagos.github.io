@@ -212,7 +212,7 @@ const Projects: React.FC = () => {
   ]
 
   return (
-    <>
+    <section>
       <Black>
         <Heading fill level={2}>
           HERE ARE SOME STUFF THAT I’VE WORKED IN THE PAST
@@ -235,7 +235,7 @@ const Projects: React.FC = () => {
           />
         ))}
       </Grid>
-    </>
+    </section>
   )
 }
 

@@ -35,13 +35,15 @@ const Highlight = styled(Box)`
 `
 
 const Header = () => (
-  <Galaxy>
-    <Overlay>
-      <Highlight align="center" justify="center" direction="row">
-        <Heading level={1}>Hello, I'm William Oliveira de Lagos</Heading>
-      </Highlight>
-    </Overlay>
-  </Galaxy>
+  <header>
+    <Galaxy>
+      <Overlay>
+        <Highlight align="center" justify="center" direction="row">
+          <Heading level={1}>Hello, I'm William Oliveira de Lagos</Heading>
+        </Highlight>
+      </Overlay>
+    </Galaxy>
+  </header>
 )
 
 export default Header
