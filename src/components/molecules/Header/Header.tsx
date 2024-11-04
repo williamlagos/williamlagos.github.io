@@ -38,8 +38,11 @@ const Header = () => (
   <header>
     <Galaxy>
       <Overlay>
-        <Highlight align="center" justify="center" direction="row">
+        <Highlight align="center" justify="center" direction="column">
           <Heading level={1}>Hello, I'm William Oliveira de Lagos</Heading>
+          <Heading margin={'none'} level={2}>
+            Seasoned Software Engineer & Serial Entrepreneur
+          </Heading>
         </Highlight>
       </Overlay>
     </Galaxy>
