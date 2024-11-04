@@ -22,48 +22,50 @@ const Brand = styled.img`
 `
 
 const Initiatives = () => (
-  <Box
-    direction="row"
-    justify="center"
-    gap="large"
-    pad="large"
-    wrap={true}
-    style={{
-      background: '#FFFFFF',
-      color: '#000000'
-    }}
-  >
-    <div>
-      <a href="#hub">
-        <Brand alt="pandora" src={pandoraSvg} />
-      </a>
-    </div>
-    <div>
-      <a href="#coworking">
-        <Brand alt="coworking" src={coworkingSvg} />
-      </a>
-    </div>
-    <div>
-      <a href="#efforia">
-        <Brand alt="efforia" src={efforiaSvg} />
-      </a>
-    </div>
-    <div>
-      <a href="#bmw">
-        <Brand alt="bmw" src={bmwSvg} />
-      </a>
-    </div>
-    <div>
-      <a href="#parloa">
-        <Brand alt="parloa" src={parloaSvg} />
-      </a>
-    </div>
-    <div>
-      <a href="#issuu">
-        <Brand alt="issuu" src={issuuSvg} />
-      </a>
-    </div>
-  </Box>
+  <section>
+    <Box
+      direction="row"
+      justify="center"
+      gap="large"
+      pad="large"
+      wrap={true}
+      style={{
+        background: '#FFFFFF',
+        color: '#000000'
+      }}
+    >
+      <div>
+        <a href="#hub">
+          <Brand alt="pandora" src={pandoraSvg} />
+        </a>
+      </div>
+      <div>
+        <a href="#coworking">
+          <Brand alt="coworking" src={coworkingSvg} />
+        </a>
+      </div>
+      <div>
+        <a href="#efforia">
+          <Brand alt="efforia" src={efforiaSvg} />
+        </a>
+      </div>
+      <div>
+        <a href="#bmw">
+          <Brand alt="bmw" src={bmwSvg} />
+        </a>
+      </div>
+      <div>
+        <a href="#parloa">
+          <Brand alt="parloa" src={parloaSvg} />
+        </a>
+      </div>
+      <div>
+        <a href="#issuu">
+          <Brand alt="issuu" src={issuuSvg} />
+        </a>
+      </div>
+    </Box>
+  </section>
 )
 
 export default Initiatives

@@ -2,16 +2,16 @@ import React, { useContext } from 'react'
 import styled from 'styled-components'
 import { Box, Heading, Grid, ResponsiveContext } from 'grommet'
 
-import kombiImg from './assets/img/kombi.png'
-import marktImg from './assets/img/markt.png'
-import eventImg from './assets/img/event.png'
-import lampsImg from './assets/img/lamps.png'
-import bmwImg from './assets/img/bmw.jpg'
+import kombiImg from './assets/img/kombi.webp'
+import marktImg from './assets/img/markt.webp'
+import eventImg from './assets/img/event.webp'
+import lampsImg from './assets/img/lamps.webp'
+import bmwImg from './assets/img/bmw.webp'
 import lightsImg from './assets/img/lights.webp'
-import workspacesImg from './assets/img/workspaces.png'
-import blockchainImg from './assets/img/blockchain.png'
-import berlinImg from './assets/img/berlin.png'
-import copenhagenImg from './assets/img/copenhagen.png'
+import workspacesImg from './assets/img/workspaces.webp'
+import blockchainImg from './assets/img/blockchain.webp'
+import berlinImg from './assets/img/berlin.webp'
+import copenhagenImg from './assets/img/copenhagen.webp'
 import spacing from '../../../tokens/spacing'
 
 // Styled components
@@ -153,35 +153,35 @@ const Projects: React.FC = () => {
     },
     {
       title: 'Fábrica de Ideias Coworking',
-      description: 'Coworking space landing page',
+      description: 'Coworking space landing page and educational platform',
       img: workspacesImg,
       link: 'https://williamlagos.github.io/coworking',
       gridArea: 'coworking'
     },
     {
       title: 'Frete Fácil',
-      description: 'Freighter delivery app',
+      description: 'Freighter delivery app for a local startup',
       img: kombiImg,
       link: 'https://williamlagos.github.io/kombi',
       gridArea: 'delivery'
     },
     {
       title: 'Vupit',
-      description: 'Beer distribution app',
+      description: 'Beer distribution app for a local startup',
       img: marktImg,
       link: 'https://williamlagos.github.io/markt',
       gridArea: 'market'
     },
     {
       title: 'Bitwala',
-      description: 'And other experiences on blockchain',
+      description: 'Blockchain-based savings account mobile development',
       img: blockchainImg,
-      link: 'https://williamlagos.github.io/blockchain',
+      link: 'https://www.bitwala.com',
       gridArea: 'blockchain'
     },
     {
       title: 'DanceApp',
-      description: 'Events Application',
+      description: 'Events application for a local startup',
       img: eventImg,
       link: 'https://github.com/williamlagos/events',
       gridArea: 'events'
@@ -212,7 +212,7 @@ const Projects: React.FC = () => {
   ]
 
   return (
-    <>
+    <section>
       <Black>
         <Heading fill level={2}>
           HERE ARE SOME STUFF THAT I’VE WORKED IN THE PAST
@@ -235,7 +235,7 @@ const Projects: React.FC = () => {
           />
         ))}
       </Grid>
-    </>
+    </section>
   )
 }
 

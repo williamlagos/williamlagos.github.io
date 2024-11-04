@@ -54,7 +54,7 @@ const projects = [
 ]
 
 const OpenSource = () => (
-  <Box>
+  <section>
     <Box
       direction="row"
       justify="center"
@@ -77,7 +77,7 @@ const OpenSource = () => (
         </Heading>
       </Box>
     </Box>
-  </Box>
+  </section>
 )
 
 export default OpenSource
