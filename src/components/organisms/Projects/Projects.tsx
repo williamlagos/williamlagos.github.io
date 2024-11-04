@@ -153,35 +153,35 @@ const Projects: React.FC = () => {
     },
     {
       title: 'Fábrica de Ideias Coworking',
-      description: 'Coworking space landing page',
+      description: 'Coworking space landing page and educational platform',
       img: workspacesImg,
       link: 'https://williamlagos.github.io/coworking',
       gridArea: 'coworking'
     },
     {
       title: 'Frete Fácil',
-      description: 'Freighter delivery app',
+      description: 'Freighter delivery app for a local startup',
       img: kombiImg,
       link: 'https://williamlagos.github.io/kombi',
       gridArea: 'delivery'
     },
     {
       title: 'Vupit',
-      description: 'Beer distribution app',
+      description: 'Beer distribution app for a local startup',
       img: marktImg,
       link: 'https://williamlagos.github.io/markt',
       gridArea: 'market'
     },
     {
       title: 'Bitwala',
-      description: 'And other experiences on blockchain',
+      description: 'Blockchain-based savings account mobile development',
       img: blockchainImg,
-      link: 'https://williamlagos.github.io/blockchain',
+      link: 'https://www.bitwala.com',
       gridArea: 'blockchain'
     },
     {
       title: 'DanceApp',
-      description: 'Events Application',
+      description: 'Events application for a local startup',
       img: eventImg,
       link: 'https://github.com/williamlagos/events',
       gridArea: 'events'
